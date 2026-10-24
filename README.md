@@ -1,6 +1,6 @@
-# Zaheer Babar — GitHub Pages Portfolio
+# Zaheer Malik — GitHub Pages Portfolio
 
-A responsive static portfolio for Muhammad Zaheer Ul Din Babar, built with HTML, CSS, and vanilla JavaScript. It is designed to deploy directly to GitHub Pages without a build step.
+A responsive static portfolio for Zaheer Malik (Muhammad Zaheer Ul Din Babar), built with HTML, CSS, and vanilla JavaScript. It is designed to deploy directly to GitHub Pages without a build step.
 
 ## Repository
 
