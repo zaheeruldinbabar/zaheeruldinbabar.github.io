@@ -3098,6 +3098,551 @@ button {
   }
 }
 
+/* ==========================================================================
+   EXECUTIVE WELCOME / INTRO SPLASH SCREEN
+   ========================================================================== */
+body.welcome-locked {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  user-select: none;
+  transition: visibility 0.85s ease;
+}
+
+.welcome-shutter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50.5%;
+  background: #050811;
+  z-index: 1;
+  transition: transform 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
+}
+
+.welcome-shutter-top {
+  top: 0;
+  border-bottom: 1px solid rgba(90, 227, 241, 0.12);
+}
+
+.welcome-shutter-bottom {
+  bottom: 0;
+  border-top: 1px solid rgba(90, 227, 241, 0.12);
+}
+
+.welcome-bg-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(90, 227, 241, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(90, 227, 241, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at 50% 50%, #000 25%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 25%, transparent 80%);
+  transition: opacity 0.55s ease;
+}
+
+.welcome-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(95px);
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.55s ease;
+}
+
+.welcome-orb-1 {
+  width: 420px;
+  height: 420px;
+  top: 10%;
+  left: 18%;
+  background: radial-gradient(circle, rgba(90, 227, 241, 0.18), transparent 70%);
+  animation: floatOrb 8s ease-in-out infinite alternate;
+}
+
+.welcome-orb-2 {
+  width: 440px;
+  height: 440px;
+  bottom: 8%;
+  right: 16%;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.16), transparent 70%);
+  animation: floatOrb 10s ease-in-out infinite alternate-reverse;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 650px;
+  background: linear-gradient(165deg, rgba(15, 23, 42, 0.86), rgba(8, 13, 26, 0.92));
+  border: 1px solid rgba(90, 227, 241, 0.22);
+  border-radius: 28px;
+  padding: 38px 36px 34px;
+  text-align: center;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.72),
+    0 0 60px rgba(90, 227, 241, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: welcomeCardEnter 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes welcomeCardEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.welcome-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(90, 227, 241, 0.08);
+  border: 1px solid rgba(90, 227, 241, 0.24);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--cyan);
+  margin-bottom: 22px;
+}
+
+.welcome-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 10px #34d399;
+  animation: statusPulse 1.8s infinite;
+}
+
+.welcome-emblem-wrap {
+  position: relative;
+  width: 86px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.welcome-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.welcome-ring-outer {
+  inset: 0;
+  border: 1.5px dashed rgba(90, 227, 241, 0.42);
+  animation: spinSlow 14s linear infinite;
+}
+
+.welcome-ring-inner {
+  inset: 9px;
+  border: 1.5px solid rgba(129, 140, 248, 0.36);
+  border-top-color: var(--cyan);
+  animation: spinSlow 6s linear infinite reverse;
+}
+
+.welcome-emblem {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(90, 227, 241, 0.18), rgba(99, 102, 241, 0.18));
+  border: 1px solid rgba(90, 227, 241, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  box-shadow: 0 0 26px rgba(90, 227, 241, 0.25);
+}
+
+.welcome-emblem i {
+  font-style: normal;
+  color: var(--cyan);
+}
+
+.welcome-kicker {
+  margin: 0 0 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.welcome-title {
+  margin: 0 0 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(24px, 4.5vw, 42px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.welcome-name-top {
+  display: block;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.welcome-name-cyan {
+  display: block;
+  white-space: nowrap;
+  background: linear-gradient(95deg, #ffffff 0%, var(--cyan) 48%, #818cf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.welcome-subtitle {
+  margin: 0 0 20px;
+  font-size: clamp(13px, 1.8vw, 15.5px);
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.welcome-subtitle span {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.welcome-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.welcome-pillars span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.welcome-pillars i {
+  font-style: normal;
+  color: var(--cyan);
+  font-size: 10px;
+}
+
+.welcome-loader-box {
+  width: 100%;
+  max-width: 440px;
+  margin-bottom: 24px;
+  background: rgba(6, 9, 19, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+
+.welcome-loader-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+}
+
+.welcome-loader-status {
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.welcome-loader-percent {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.welcome-progress-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(30, 41, 59, 0.9);
+  overflow: hidden;
+  position: relative;
+}
+
+.welcome-progress-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3b82f6, var(--cyan), #34d399);
+  box-shadow: 0 0 14px var(--cyan);
+  transition: width 0.08s linear;
+}
+
+.welcome-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.welcome-enter-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(90, 227, 241, 0.55);
+  background: linear-gradient(135deg, var(--cyan) 0%, #38bdf8 55%, #818cf8 100%);
+  color: #040914;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow:
+    0 12px 32px rgba(90, 227, 241, 0.35),
+    0 0 0 4px rgba(90, 227, 241, 0.12);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.welcome-enter-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 16px 40px rgba(90, 227, 241, 0.5),
+    0 0 0 6px rgba(90, 227, 241, 0.2);
+}
+
+.welcome-btn-arrow {
+  font-size: 16px;
+  transition: transform 0.25s ease;
+}
+
+.welcome-enter-btn:hover .welcome-btn-arrow {
+  transform: translate(3px, -3px);
+}
+
+.welcome-hint {
+  font-size: 11.5px;
+  color: var(--muted-dim);
+  letter-spacing: 0.04em;
+}
+
+/* Exit Animation State when entering portfolio */
+.welcome-screen.is-exiting {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.welcome-screen.is-exiting .welcome-content,
+.welcome-screen.is-exiting .welcome-bg-grid,
+.welcome-screen.is-exiting .welcome-orb {
+  opacity: 0;
+  transform: scale(0.92) translateY(-16px);
+}
+
+.welcome-screen.is-exiting .welcome-shutter-top {
+  transform: translateY(-102%);
+}
+
+.welcome-screen.is-exiting .welcome-shutter-bottom {
+  transform: translateY(102%);
+}
+
+@media (max-width: 720px) {
+  .welcome-content {
+    padding: 28px 20px 24px;
+    border-radius: 22px;
+  }
+  .welcome-status-pill {
+    font-size: 9.5px;
+    padding: 5px 11px;
+    margin-bottom: 16px;
+  }
+  .welcome-emblem-wrap {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 14px;
+  }
+  .welcome-emblem {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+  .welcome-kicker {
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+  }
+  .welcome-title {
+    font-size: clamp(22px, 6.8vw, 32px);
+  }
+  .welcome-pillars {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+  .welcome-pillars span {
+    font-size: 10.5px;
+    padding: 4px 9px;
+  }
+  .welcome-enter-btn {
+    width: 100%;
+    max-width: 260px;
+    padding: 13px 24px;
+  }
+}
+
+/* ==========================================================================
+   CUSTOM INTERACTIVE CURSOR / POINTER (DESKTOP FINE POINTERS)
+   ========================================================================== */
+.custom-cursor-dot,
+.custom-cursor-ring {
+  display: none;
+}
+
+@media (pointer: fine) {
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  .project-card,
+  .skill-card,
+  .spotlight-card {
+    cursor: none !important;
+  }
+
+  .custom-cursor-dot {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    z-index: 10002;
+    transform: translate3d(-100px, -100px, 0);
+    will-change: transform;
+    transition: opacity 0.2s ease;
+  }
+
+  .cursor-pointer-svg {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 0 8px rgba(90, 227, 241, 0.75));
+    transition: transform 0.18s var(--ease-out), filter 0.18s ease;
+    transform-origin: 4px 3px;
+  }
+
+  .custom-cursor-dot.is-hovering .cursor-pointer-svg {
+    transform: scale(1.18) rotate(-6deg);
+    filter: drop-shadow(0 0 12px rgba(90, 227, 241, 1));
+  }
+
+  .custom-cursor-dot.is-clicking .cursor-pointer-svg {
+    transform: scale(0.86);
+  }
+
+  .custom-cursor-ring {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    margin-left: -19px;
+    margin-top: -19px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(90, 227, 241, 0.45);
+    background: radial-gradient(circle, rgba(90, 227, 241, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 10001;
+    transform: translate3d(-100px, -100px, 0);
+    will-change: transform, width, height;
+    transition:
+      width 0.25s var(--ease-out),
+      height 0.25s var(--ease-out),
+      margin 0.25s var(--ease-out),
+      border-color 0.25s ease,
+      background-color 0.25s ease,
+      box-shadow 0.25s ease,
+      opacity 0.2s ease;
+  }
+
+  .custom-cursor-ring.is-hovering {
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    border-color: rgba(90, 227, 241, 0.9);
+    background: rgba(90, 227, 241, 0.12);
+    box-shadow: 0 0 24px rgba(90, 227, 241, 0.32), inset 0 0 12px rgba(90, 227, 241, 0.18);
+  }
+
+  .custom-cursor-ring.is-clicking {
+    width: 28px;
+    height: 28px;
+    margin-left: -14px;
+    margin-top: -14px;
+    border-color: #34d399;
+    box-shadow: 0 0 28px rgba(52, 211, 153, 0.65);
+  }
+
+  .cursor-ring-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--cyan);
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .custom-cursor-ring.has-label .cursor-ring-label {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

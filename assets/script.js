@@ -4,6 +4,72 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. EXECUTIVE WELCOME / INTRO SPLASH SCREEN
+  const welcomeScreen = document.getElementById('welcomeScreen');
+  const enterBtn = document.getElementById('enterPortfolioBtn');
+  const progressFill = document.getElementById('welcomeProgressFill');
+  const percentEl = document.getElementById('welcomePercent');
+  const statusTextEl = document.getElementById('welcomeStatusText');
+  const hintEl = document.getElementById('welcomeHint');
+
+  if (welcomeScreen) {
+    let hasEntered = false;
+    const loadDuration = 1650;
+    const startLoad = performance.now();
+
+    function enterPortfolio() {
+      if (hasEntered) return;
+      hasEntered = true;
+      welcomeScreen.classList.add('is-exiting');
+      document.body.classList.remove('welcome-locked');
+      setTimeout(() => {
+        welcomeScreen.style.display = 'none';
+      }, 900);
+    }
+
+    function stepLoader(now) {
+      if (hasEntered) return;
+      const elapsed = now - startLoad;
+      const progress = Math.min(elapsed / loadDuration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const pct = Math.round(eased * 100);
+
+      if (progressFill) progressFill.style.width = `${pct}%`;
+      if (percentEl) percentEl.textContent = `${pct}%`;
+
+      if (statusTextEl) {
+        if (pct < 38) {
+          statusTextEl.textContent = 'Initializing Architecture & UI Engine...';
+        } else if (pct < 82) {
+          statusTextEl.textContent = 'Loading 9 Flagship Projects & Experience...';
+        } else if (pct < 100) {
+          statusTextEl.textContent = 'Verifying Interactive Systems...';
+        } else {
+          statusTextEl.textContent = 'System Ready — Welcome!';
+        }
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(stepLoader);
+      } else if (hintEl) {
+        hintEl.textContent = 'Ready — Click "Enter Portfolio" or press Enter';
+      }
+    }
+
+    requestAnimationFrame(stepLoader);
+
+    if (enterBtn) {
+      enterBtn.addEventListener('click', enterPortfolio);
+    }
+
+    window.addEventListener('keydown', e => {
+      if (!hasEntered && (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape')) {
+        e.preventDefault();
+        enterPortfolio();
+      }
+    });
+  }
+
   // 1. DYNAMIC FOOTER YEAR
   const yearEl = document.getElementById('year');
   if (yearEl) {
@@ -126,35 +192,105 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
   }
 
-  // 7. AMBIENT CURSOR GLOW (DESKTOP POINTERS)
+  // 7. CUSTOM INTERACTIVE POINTER / CURSOR & AMBIENT GLOW (DESKTOP POINTERS)
   const cursorGlow = document.getElementById('cursorGlow');
+  const cursorDot = document.getElementById('cursorDot');
+  const cursorRing = document.getElementById('cursorRing');
+  const cursorLabel = document.getElementById('cursorLabel');
   const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
 
-  if (cursorGlow && hasFinePointer && !reduceMotion) {
+  if (hasFinePointer) {
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
-    let currentX = mouseX;
-    let currentY = mouseY;
+    let glowX = mouseX;
+    let glowY = mouseY;
+    let ringX = mouseX;
+    let ringY = mouseY;
 
     window.addEventListener('mousemove', e => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      cursorGlow.style.opacity = '1';
+      if (cursorDot) {
+        cursorDot.style.opacity = '1';
+        cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+      }
+      if (cursorRing) {
+        cursorRing.style.opacity = '1';
+      }
+      if (cursorGlow) {
+        cursorGlow.style.opacity = '1';
+      }
     }, { passive: true });
 
     document.addEventListener('mouseleave', () => {
-      cursorGlow.style.opacity = '0';
+      if (cursorDot) cursorDot.style.opacity = '0';
+      if (cursorRing) cursorRing.style.opacity = '0';
+      if (cursorGlow) cursorGlow.style.opacity = '0';
+    });
+
+    window.addEventListener('mousedown', () => {
+      if (cursorDot) cursorDot.classList.add('is-clicking');
+      if (cursorRing) cursorRing.classList.add('is-clicking');
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (cursorDot) cursorDot.classList.remove('is-clicking');
+      if (cursorRing) cursorRing.classList.remove('is-clicking');
+    });
+
+    // Hover states for interactive elements
+    const interactiveSelectors = 'a, button, .project-card, .skill-card, .timeline-content, .credential, .portrait-frame';
+    document.querySelectorAll(interactiveSelectors).forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        if (cursorDot) cursorDot.classList.add('is-hovering');
+        if (cursorRing) {
+          cursorRing.classList.add('is-hovering');
+          if (cursorLabel) {
+            if (el.id === 'enterPortfolioBtn') {
+              cursorLabel.textContent = 'ENTER';
+              cursorRing.classList.add('has-label');
+            } else if (el.classList.contains('project-link') || (el.tagName === 'A' && el.target === '_blank')) {
+              cursorLabel.textContent = 'OPEN';
+              cursorRing.classList.add('has-label');
+            } else if (el.classList.contains('project-card')) {
+              cursorLabel.textContent = 'VIEW';
+              cursorRing.classList.add('has-label');
+            } else {
+              cursorLabel.textContent = '';
+              cursorRing.classList.remove('has-label');
+            }
+          }
+        }
+      });
+
+      el.addEventListener('mouseleave', () => {
+        if (cursorDot) cursorDot.classList.remove('is-hovering');
+        if (cursorRing) {
+          cursorRing.classList.remove('is-hovering', 'has-label');
+        }
+        if (cursorLabel) cursorLabel.textContent = '';
+      });
     });
 
     function renderCursor() {
-      currentX += (mouseX - currentX) * 0.14;
-      currentY += (mouseY - currentY) * 0.14;
-      cursorGlow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+      ringX += (mouseX - ringX) * 0.24;
+      ringY += (mouseY - ringY) * 0.24;
+      if (cursorRing) {
+        cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+      }
+
+      if (cursorGlow && !reduceMotion) {
+        glowX += (mouseX - glowX) * 0.14;
+        glowY += (mouseY - glowY) * 0.14;
+        cursorGlow.style.transform = `translate3d(${glowX}px, ${glowY}px, 0) translate(-50%, -50%)`;
+      }
       requestAnimationFrame(renderCursor);
     }
     renderCursor();
-  } else if (cursorGlow) {
-    cursorGlow.style.display = 'none';
+  } else {
+    if (cursorGlow) cursorGlow.style.display = 'none';
+    if (cursorDot) cursorDot.style.display = 'none';
+    if (cursorRing) cursorRing.style.display = 'none';
   }
 
   // 8. SPOTLIGHT RADIAL HIGHLIGHT & 3D TILT INTERACTION
