@@ -330,9 +330,6 @@ button {
 
 .section-heading h2 span, .contact-inner h2 span, .hero h1 span {
   color: var(--cyan);
-  background: linear-gradient(135deg, #5ae3f1 0%, #818cf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .heading-row {
@@ -393,28 +390,23 @@ button {
 }
 
 .eyebrow {
-  font-size: 10.5px;
-  letter-spacing: 0.2em;
+  font-size: 10px;
+  letter-spacing: 0.19em;
   font-weight: 700;
   color: var(--cyan);
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 22px;
-  background: rgba(90, 227, 241, 0.07);
-  border: 1px solid rgba(90, 227, 241, 0.24);
-  padding: 7px 15px;
-  border-radius: 99px;
-  box-shadow: 0 0 24px rgba(90, 227, 241, 0.08);
+  gap: 9px;
+  margin-bottom: 26px;
 }
 
 .status-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--accent-emerald);
+  width: 7px;
+  height: 7px;
+  background: #5ae3a8;
   border-radius: 50%;
   position: relative;
-  box-shadow: 0 0 10px var(--accent-emerald);
+  box-shadow: 0 0 13px #5ae3a866;
 }
 
 .status-dot::after {
@@ -422,7 +414,7 @@ button {
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  border: 2px solid var(--accent-emerald);
+  border: 2px solid #5ae3a8;
   animation: radarPulse 2s ease-out infinite;
 }
 
@@ -433,22 +425,21 @@ button {
 
 .hero-intro {
   color: var(--muted);
-  margin: 0 0 4px;
-  font-size: 18px;
-  font-weight: 500;
+  margin: 0 0 2px;
+  font-size: 17px;
 }
 
 .hero h1 {
-  font: 700 clamp(48px, 6vw, 76px)/1.03 'Space Grotesk', sans-serif;
+  font: 700 clamp(42px, 5.1vw, 67px)/1.04 'Space Grotesk', sans-serif;
   letter-spacing: -0.055em;
-  margin: 0 0 18px;
-  color: var(--text-bright);
+  margin: 0 0 22px;
+  color: var(--text);
 }
 
 .hero h2 {
-  font: 500 clamp(20px, 2.2vw, 24px)/1.4 'Space Grotesk', sans-serif;
+  font: 500 22px/1.4 'Space Grotesk', sans-serif;
   margin: 0 0 18px;
-  color: #dce6fa;
+  color: #dbe5f8;
 }
 
 .accent {
