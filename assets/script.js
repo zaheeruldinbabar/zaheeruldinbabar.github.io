@@ -4,17 +4,14 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 0. EXECUTIVE WELCOME / INTRO SPLASH SCREEN
+  // 0. MINIMAL WELCOME / LOADING SPLASH SCREEN (AUTO-LAUNCHES IN ~2.3s)
   const welcomeScreen = document.getElementById('welcomeScreen');
-  const enterBtn = document.getElementById('enterPortfolioBtn');
   const progressFill = document.getElementById('welcomeProgressFill');
   const percentEl = document.getElementById('welcomePercent');
-  const statusTextEl = document.getElementById('welcomeStatusText');
-  const hintEl = document.getElementById('welcomeHint');
 
   if (welcomeScreen) {
     let hasEntered = false;
-    const loadDuration = 1650;
+    const loadDuration = 2200;
     const startLoad = performance.now();
 
     function enterPortfolio() {
@@ -24,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.remove('welcome-locked');
       setTimeout(() => {
         welcomeScreen.style.display = 'none';
-      }, 900);
+      }, 850);
     }
 
     function stepLoader(now) {
@@ -37,37 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (progressFill) progressFill.style.width = `${pct}%`;
       if (percentEl) percentEl.textContent = `${pct}%`;
 
-      if (statusTextEl) {
-        if (pct < 38) {
-          statusTextEl.textContent = 'Initializing Architecture & UI Engine...';
-        } else if (pct < 82) {
-          statusTextEl.textContent = 'Loading 9 Flagship Projects & Experience...';
-        } else if (pct < 100) {
-          statusTextEl.textContent = 'Verifying Interactive Systems...';
-        } else {
-          statusTextEl.textContent = 'System Ready — Welcome!';
-        }
-      }
-
       if (progress < 1) {
         requestAnimationFrame(stepLoader);
-      } else if (hintEl) {
-        hintEl.textContent = 'Ready — Click "Enter Portfolio" or press Enter';
+      } else {
+        setTimeout(enterPortfolio, 220);
       }
     }
 
     requestAnimationFrame(stepLoader);
-
-    if (enterBtn) {
-      enterBtn.addEventListener('click', enterPortfolio);
-    }
-
-    window.addEventListener('keydown', e => {
-      if (!hasEntered && (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape')) {
-        e.preventDefault();
-        enterPortfolio();
-      }
-    });
   }
 
   // 1. DYNAMIC FOOTER YEAR

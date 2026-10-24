@@ -18,9 +18,9 @@
 </head>
 <body class="welcome-locked">
   <!-- =================================================================
-       EXECUTIVE WELCOME / INTRO SPLASH SCREEN
+       MINIMAL WELCOME / LOADING SPLASH SCREEN (AUTO-LAUNCHES IN ~2.3s)
        ================================================================= -->
-  <div class="welcome-screen" id="welcomeScreen" role="dialog" aria-modal="true" aria-label="Welcome to Muhammad Zaheer Ul Din Babar Portfolio">
+  <div class="welcome-screen" id="welcomeScreen" aria-label="Loading Muhammad Zaheer Ul Din Babar Portfolio">
     <div class="welcome-shutter welcome-shutter-top"></div>
     <div class="welcome-shutter welcome-shutter-bottom"></div>
     <div class="welcome-bg-grid" aria-hidden="true"></div>
@@ -28,58 +28,31 @@
     <div class="welcome-orb welcome-orb-2" aria-hidden="true"></div>
 
     <div class="welcome-content" id="welcomeContent">
-      <!-- Top System Badge -->
-      <div class="welcome-status-pill">
-        <span class="welcome-status-dot"></span>
-        <span>PORTFOLIO SYSTEM ONLINE · GUJRANWALA, PK</span>
+      <!-- Brand Logo -->
+      <div class="welcome-brand">
+        <span class="brand-mark">Z<span>.</span></span>
+        <span class="brand-name">ZAHEER MALIK</span>
       </div>
 
-      <!-- Animated Orbital Brand Monogram -->
-      <div class="welcome-emblem-wrap">
+      <!-- Simple Portrait Photo with Subtle Animated Ring -->
+      <div class="welcome-photo-wrap">
         <div class="welcome-ring welcome-ring-outer"></div>
         <div class="welcome-ring welcome-ring-inner"></div>
-        <div class="welcome-emblem">
-          <span>Z<i>.</i></span>
-        </div>
+        <img src="assets/profile.jpg" alt="Muhammad Zaheer Ul Din Babar" class="welcome-photo">
       </div>
 
-      <!-- Identity & Welcome Greeting -->
-      <p class="welcome-kicker">WELCOME TO THE OFFICIAL DIGITAL PORTFOLIO OF</p>
+      <!-- Full Name -->
       <h1 class="welcome-title">
         <span class="welcome-name-top">Muhammad Zaheer</span>
         <span class="welcome-name-cyan">Ul Din Babar.</span>
       </h1>
-      <p class="welcome-subtitle">
-        Full-Stack Web Developer <span>&amp;</span> Information Technology Professional
-      </p>
 
-      <!-- Core Expertise Pills -->
-      <div class="welcome-pillars" aria-hidden="true">
-        <span><i>✦</i> Full-Stack Engineering</span>
-        <span><i>✦</i> SaaS &amp; Cloud Architecture</span>
-        <span><i>✦</i> UI/UX &amp; Brand Design</span>
-        <span><i>✦</i> IT Lecturer &amp; Mentor</span>
-      </div>
-
-      <!-- Live System Progress Loader -->
+      <!-- Clean Auto-Loading Bar -->
       <div class="welcome-loader-box">
-        <div class="welcome-loader-meta">
-          <span class="welcome-loader-status" id="welcomeStatusText">Initializing Portfolio Experience...</span>
-          <span class="welcome-loader-percent" id="welcomePercent">0%</span>
-        </div>
         <div class="welcome-progress-track">
           <div class="welcome-progress-fill" id="welcomeProgressFill"></div>
         </div>
-      </div>
-
-      <!-- Interactive Enter Button -->
-      <div class="welcome-actions">
-        <button type="button" class="welcome-enter-btn magnetic-btn" id="enterPortfolioBtn">
-          <span class="welcome-btn-glow"></span>
-          <span class="welcome-btn-text">Enter Portfolio</span>
-          <span class="welcome-btn-arrow">↗</span>
-        </button>
-        <span class="welcome-hint" id="welcomeHint">Click button or press Enter to launch</span>
+        <span class="welcome-loader-percent" id="welcomePercent">0%</span>
       </div>
     </div>
   </div>

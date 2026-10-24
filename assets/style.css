@@ -3185,29 +3185,20 @@ body.welcome-locked {
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 650px;
-  background: linear-gradient(165deg, rgba(15, 23, 42, 0.86), rgba(8, 13, 26, 0.92));
-  border: 1px solid rgba(90, 227, 241, 0.22);
-  border-radius: 28px;
-  padding: 38px 36px 34px;
-  text-align: center;
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-  box-shadow:
-    0 32px 80px rgba(0, 0, 0, 0.72),
-    0 0 60px rgba(90, 227, 241, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  max-width: 440px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 24px 20px;
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-  animation: welcomeCardEnter 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: welcomeCardEnter 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes welcomeCardEnter {
   0% {
     opacity: 0;
-    transform: translateY(24px) scale(0.96);
+    transform: translateY(18px) scale(0.95);
   }
   100% {
     opacity: 1;
@@ -3215,39 +3206,26 @@ body.welcome-locked {
   }
 }
 
-.welcome-status-pill {
+.welcome-brand {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 7px 16px;
   border-radius: 999px;
-  background: rgba(90, 227, 241, 0.08);
-  border: 1px solid rgba(90, 227, 241, 0.24);
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--cyan);
-  margin-bottom: 22px;
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(90, 227, 241, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-.welcome-status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #34d399;
-  box-shadow: 0 0 10px #34d399;
-  animation: statusPulse 1.8s infinite;
-}
-
-.welcome-emblem-wrap {
+.welcome-photo-wrap {
   position: relative;
-  width: 86px;
-  height: 86px;
+  width: 126px;
+  height: 126px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .welcome-ring {
@@ -3257,55 +3235,35 @@ body.welcome-locked {
 }
 
 .welcome-ring-outer {
-  inset: 0;
-  border: 1.5px dashed rgba(90, 227, 241, 0.42);
-  animation: spinSlow 14s linear infinite;
+  inset: -8px;
+  border: 1.5px dashed rgba(90, 227, 241, 0.45);
+  animation: spinSlow 12s linear infinite;
 }
 
 .welcome-ring-inner {
-  inset: 9px;
-  border: 1.5px solid rgba(129, 140, 248, 0.36);
+  inset: -2px;
+  border: 2px solid rgba(129, 140, 248, 0.38);
   border-top-color: var(--cyan);
-  animation: spinSlow 6s linear infinite reverse;
+  border-right-color: var(--cyan);
+  animation: spinSlow 3.5s linear infinite;
 }
 
-.welcome-emblem {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(90, 227, 241, 0.18), rgba(99, 102, 241, 0.18));
-  border: 1px solid rgba(90, 227, 241, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  color: #ffffff;
-  box-shadow: 0 0 26px rgba(90, 227, 241, 0.25);
-}
-
-.welcome-emblem i {
-  font-style: normal;
-  color: var(--cyan);
-}
-
-.welcome-kicker {
-  margin: 0 0 8px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  color: var(--muted);
-  text-transform: uppercase;
+.welcome-photo {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2px solid rgba(90, 227, 241, 0.6);
+  box-shadow: 0 0 34px rgba(90, 227, 241, 0.28);
 }
 
 .welcome-title {
-  margin: 0 0 10px;
+  margin: 0 0 24px;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(24px, 4.5vw, 42px);
+  font-size: clamp(24px, 4.2vw, 36px);
   font-weight: 700;
-  line-height: 1.12;
+  line-height: 1.14;
   letter-spacing: -0.025em;
 }
 
@@ -3324,77 +3282,18 @@ body.welcome-locked {
   color: transparent;
 }
 
-.welcome-subtitle {
-  margin: 0 0 20px;
-  font-size: clamp(13px, 1.8vw, 15.5px);
-  font-weight: 500;
-  color: #cbd5e1;
-}
-
-.welcome-subtitle span {
-  color: var(--cyan);
-  font-weight: 700;
-}
-
-.welcome-pillars {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.welcome-pillars span {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px 11px;
-  border-radius: 8px;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  font-size: 11.5px;
-  font-weight: 500;
-  color: #94a3b8;
-}
-
-.welcome-pillars i {
-  font-style: normal;
-  color: var(--cyan);
-  font-size: 10px;
-}
-
 .welcome-loader-box {
   width: 100%;
-  max-width: 440px;
-  margin-bottom: 24px;
-  background: rgba(6, 9, 19, 0.65);
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  border-radius: 14px;
-  padding: 12px 16px;
-}
-
-.welcome-loader-meta {
+  max-width: 260px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 12px;
-}
-
-.welcome-loader-status {
-  color: #cbd5e1;
-  font-weight: 500;
-}
-
-.welcome-loader-percent {
-  color: var(--cyan);
-  font-weight: 700;
+  gap: 8px;
 }
 
 .welcome-progress-track {
   width: 100%;
-  height: 6px;
+  height: 5px;
   border-radius: 999px;
   background: rgba(30, 41, 59, 0.9);
   overflow: hidden;
@@ -3407,58 +3306,14 @@ body.welcome-locked {
   border-radius: 999px;
   background: linear-gradient(90deg, #3b82f6, var(--cyan), #34d399);
   box-shadow: 0 0 14px var(--cyan);
-  transition: width 0.08s linear;
 }
 
-.welcome-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 9px;
-}
-
-.welcome-enter-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 32px;
-  border-radius: 999px;
-  border: 1px solid rgba(90, 227, 241, 0.55);
-  background: linear-gradient(135deg, var(--cyan) 0%, #38bdf8 55%, #818cf8 100%);
-  color: #040914;
+.welcome-loader-percent {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 14.5px;
+  font-size: 12px;
+  color: var(--cyan);
   font-weight: 700;
-  letter-spacing: 0.04em;
-  box-shadow:
-    0 12px 32px rgba(90, 227, 241, 0.35),
-    0 0 0 4px rgba(90, 227, 241, 0.12);
-  transition: transform 0.25s var(--ease-out), box-shadow 0.25s ease;
-  overflow: hidden;
-}
-
-.welcome-enter-btn:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow:
-    0 16px 40px rgba(90, 227, 241, 0.5),
-    0 0 0 6px rgba(90, 227, 241, 0.2);
-}
-
-.welcome-btn-arrow {
-  font-size: 16px;
-  transition: transform 0.25s ease;
-}
-
-.welcome-enter-btn:hover .welcome-btn-arrow {
-  transform: translate(3px, -3px);
-}
-
-.welcome-hint {
-  font-size: 11.5px;
-  color: var(--muted-dim);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
 }
 
 /* Exit Animation State when entering portfolio */
@@ -3483,44 +3338,18 @@ body.welcome-locked {
 }
 
 @media (max-width: 720px) {
-  .welcome-content {
-    padding: 28px 20px 24px;
-    border-radius: 22px;
-  }
-  .welcome-status-pill {
-    font-size: 9.5px;
-    padding: 5px 11px;
-    margin-bottom: 16px;
-  }
-  .welcome-emblem-wrap {
-    width: 72px;
-    height: 72px;
-    margin-bottom: 14px;
-  }
-  .welcome-emblem {
-    width: 46px;
-    height: 46px;
-    font-size: 22px;
-  }
-  .welcome-kicker {
-    font-size: 9.5px;
-    letter-spacing: 0.14em;
-  }
-  .welcome-title {
-    font-size: clamp(22px, 6.8vw, 32px);
-  }
-  .welcome-pillars {
-    gap: 6px;
+  .welcome-photo-wrap {
+    width: 110px;
+    height: 110px;
     margin-bottom: 18px;
   }
-  .welcome-pillars span {
-    font-size: 10.5px;
-    padding: 4px 9px;
+  .welcome-photo {
+    width: 96px;
+    height: 96px;
   }
-  .welcome-enter-btn {
-    width: 100%;
-    max-width: 260px;
-    padding: 13px 24px;
+  .welcome-title {
+    font-size: clamp(22px, 6.8vw, 30px);
+    margin-bottom: 20px;
   }
 }
 
