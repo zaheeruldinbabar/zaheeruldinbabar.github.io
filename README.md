@@ -48,3 +48,13 @@ Your uploaded resume is included at `assets/zaheer-babar-resume.pdf`. The file i
 - Main content: `index.html`
 - Design and responsive layout: `assets/style.css`
 - Mobile navigation and scroll reveal: `assets/script.js`
+
+## Design portfolio
+
+`designs.html` shows design work as projects, like a Behance profile: a grid of project covers, a full-screen project viewer, and a zoom view.
+
+- Page styles and behaviour: `assets/designs.css` and `assets/designs.js` (loaded only on that page).
+- Project list: the JSON block with `id="designData"` near the end of `designs.html`. Each project has a slug `s`, category `c`, title `t`, type `k`, description `d`, tags `g`, cover number `v` and image sizes `i`.
+- Images: `assets/designs/<slug>/01.webp` (full size, up to 1400 px) and `01t.webp` (thumbnail, up to 520 px wide), numbered in order.
+
+To add a design to a project, add the next numbered pair of WebP files to its folder and append `[thumbWidth, thumbHeight, fullWidth, fullHeight]` to that project's `i` list.

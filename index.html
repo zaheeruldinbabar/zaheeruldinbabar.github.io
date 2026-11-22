@@ -8,15 +8,31 @@
   <meta property="og:title" content="Zaheer Malik | Muhammad Zaheer Ul Din Babar — Full-Stack Developer & IT Professional">
   <meta property="og:description" content="5+ years of experience across full-stack web development, software solutions, UI/UX, graphic design, digital marketing, e-commerce, and technical leadership.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/profile.jpg">
+  <meta property="og:url" content="https://zaheeruldinbabar.github.io/">
+  <meta property="og:image" content="https://zaheeruldinbabar.github.io/assets/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://zaheeruldinbabar.github.io/">
   <title>Zaheer Malik | Muhammad Zaheer Ul Din Babar — Full-Stack Developer & IT Professional</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Muhammad Zaheer Ul Din Babar","alternateName":"Zaheer Malik","url":"https://zaheeruldinbabar.github.io/","image":"https://zaheeruldinbabar.github.io/assets/profile.jpg","jobTitle":"Full-Stack Web Developer","address":{"@type":"PostalAddress","addressLocality":"Gujranwala","addressCountry":"PK"},"sameAs":["https://github.com/zaheeruldinbabar","https://www.linkedin.com/in/zaheer-ul-din-babar/"]}</script>
+  <script>
+    /* Show the welcome screen once per browser session, and never when motion is reduced. */
+    try {
+      if (sessionStorage.getItem('zmWelcomeSeen') || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('skip-welcome');
+      }
+    } catch (e) {}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=2026.12">
-  <link rel="icon" type="image/jpeg" href="assets/profile.jpg">
+  <!-- Fonts load without blocking the first paint; text shows at once in a system font, then swaps. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="assets/style.css?v=2026.13">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
 <body class="welcome-locked">
+  <a class="skip-link" href="#main">Skip to content</a>
   <!-- =================================================================
        MINIMAL WELCOME / LOADING SPLASH SCREEN (AUTO-LAUNCHES IN ~2.3s)
        ================================================================= -->
@@ -38,14 +54,14 @@
       <div class="welcome-photo-wrap">
         <div class="welcome-ring welcome-ring-outer"></div>
         <div class="welcome-ring welcome-ring-inner"></div>
-        <img src="assets/profile.jpg" alt="Muhammad Zaheer Ul Din Babar" class="welcome-photo">
+        <img src="assets/profile.webp" alt="" width="640" height="858" class="welcome-photo">
       </div>
 
-      <!-- Full Name -->
-      <h1 class="welcome-title">
+      <!-- Full Name (decorative here; the page's real h1 is in the hero) -->
+      <p class="welcome-title" aria-hidden="true">
         <span class="welcome-name-top">Muhammad Zaheer</span>
         <span class="welcome-name-cyan">Ul Din Babar.</span>
-      </h1>
+      </p>
 
       <!-- Clean Auto-Loading Bar -->
       <div class="welcome-loader-box">
@@ -60,11 +76,6 @@
   <!-- =================================================================
        CUSTOM INTERACTIVE POINTER / CURSOR
        ================================================================= -->
-  <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true">
-    <svg class="cursor-pointer-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4.5 3.5L19.5 11.2L12.2 13.4L9.2 20.5L4.5 3.5Z" fill="#5ae3f1" stroke="#060913" stroke-width="1.6" stroke-linejoin="round"/>
-    </svg>
-  </div>
   <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true">
     <span class="cursor-ring-label" id="cursorLabel"></span>
   </div>
@@ -99,7 +110,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <!-- =================================================================
          HERO SECTION
          ================================================================= -->
@@ -140,7 +151,7 @@
             <span>Explore Projects</span> <span class="btn-arrow">↗</span>
           </a>
           <a class="button button-royal magnetic-btn" href="designs.html">
-            <span>Design Portfolio (37+)</span> <span class="btn-arrow">✦</span>
+            <span>Design Portfolio</span> <span class="btn-arrow">✦</span>
           </a>
           <a class="button button-emerald magnetic-btn" href="assets/zaheer-babar-resume.pdf" target="_blank" rel="noopener">
             <span>View Full CV</span> <span class="btn-arrow">↓</span>
@@ -174,7 +185,7 @@
         <div class="orbit orbit-three"></div>
         <div class="portrait-container">
           <div class="portrait-frame" id="portraitFrame">
-            <img class="portrait" src="assets/profile.jpg" alt="Muhammad Zaheer Ul Din Babar — Full-Stack Developer & Information Technology Professional" fetchpriority="high">
+            <img class="portrait" src="assets/profile.webp" width="640" height="858" alt="Muhammad Zaheer Ul Din Babar — Full-Stack Developer & Information Technology Professional" fetchpriority="high">
             <div class="portrait-shine"></div>
             <div class="portrait-border-glow"></div>
           </div>
@@ -356,7 +367,7 @@
         </p>
       </div>
 
-      <div class="timeline">
+      <div class="timeline" id="experienceTimeline">
         <!-- ROLE 1: WEBSOFT IT DEVELOPMENT SOLUTION -->
         <article class="timeline-item current reveal" style="--delay: 0.05s">
           <div class="timeline-date">
@@ -456,7 +467,7 @@
         </article>
 
         <!-- ROLE 5: SHENZHEN SHAD TRADERS & CO. LTD. -->
-        <article class="timeline-item reveal" style="--delay: 0.17s">
+        <article class="timeline-item timeline-extra reveal" style="--delay: 0.05s">
           <div class="timeline-date">
             <span>MARCH 2023 — DECEMBER 2023</span>
             <small class="timeline-loc">International E-Commerce</small>
@@ -479,7 +490,7 @@
         </article>
 
         <!-- ROLE 6: USA SOLUTION CREATORS TECHNOLOGY LLC (WORDPRESS & SMM) -->
-        <article class="timeline-item reveal" style="--delay: 0.20s">
+        <article class="timeline-item timeline-extra reveal" style="--delay: 0.08s">
           <div class="timeline-date">
             <span>FEBRUARY 2021 — JULY 2023</span>
             <small class="timeline-loc">Wyoming, USA (Remote)</small>
@@ -502,7 +513,7 @@
         </article>
 
         <!-- ROLE 7: USA SOLUTION CREATORS LLC (DATA ENTRY SPECIALIST) -->
-        <article class="timeline-item reveal" style="--delay: 0.23s">
+        <article class="timeline-item timeline-extra reveal" style="--delay: 0.11s">
           <div class="timeline-date">
             <span>JANUARY 2022 — OCTOBER 2023</span>
             <small class="timeline-loc">Wyoming, USA (Remote)</small>
@@ -522,6 +533,12 @@
             </div>
           </div>
         </article>
+      </div>
+
+      <div class="timeline-toggle-row">
+        <button type="button" class="button button-secondary timeline-toggle" id="timelineToggle" aria-expanded="false" aria-controls="experienceTimeline" hidden>
+          <span id="timelineToggleText">Show 3 earlier roles</span> <span class="btn-arrow" aria-hidden="true">↓</span>
+        </button>
       </div>
 
       <!-- EDUCATION & INTERNSHIPS -->
@@ -1032,22 +1049,22 @@
       <!-- Featured Graphic Design Portfolio Banner -->
       <div class="design-showcase-banner spotlight-card reveal">
         <div class="dsb-copy">
-          <p class="section-kicker"><span class="kicker-line"></span> ADOBE CERTIFIED PROFESSIONAL · 37+ CURATED ARTWORKS</p>
+          <p class="section-kicker"><span class="kicker-line"></span> ADOBE CERTIFIED PROFESSIONAL · 22 DESIGN PROJECTS</p>
           <h3>Explore My Graphic Design &amp; <span>Visual Brand Portfolio.</span></h3>
           <p>
-            Browse 37+ commercial design works including brand identities, ZM corporate business cards, IT HUB GRW stationery, WEBSOFT &amp; TEVTA campaigns, CalcPerks FinTech ads, US real estate campaigns, Zestiq Foods (Texas, USA) export packaging labels, and Adobe Illustrator vector art.
+            345 designs across 22 projects, organised like a Behance profile: Jaguar VPN launch creatives, Arwaan Rice and Zestiq Foods packaging, the CalcPerks campaign, IT Hub GRW and Middle Man brand identities, TEVTA and Websoft campaigns, logos and print.
           </p>
           <div class="dsb-actions">
             <a href="designs.html" class="button button-violet magnetic-btn">
-              <span>Open Graphic Design Portfolio (37 Works)</span> <span class="btn-arrow">↗</span>
+              <span>Open Design Portfolio</span> <span class="btn-arrow">↗</span>
             </a>
           </div>
         </div>
         <a href="designs.html" class="dsb-preview-grid" aria-label="Open Graphic Design Portfolio">
-          <img src="assets/designs/zm-card-dark-crimson.jpg" alt="Zaheer Malik ZM Business Card" loading="lazy">
-          <img src="assets/designs/tevta-adobe-uiux-post.jpg" alt="TEVTA Adobe UI/UX Campaign" loading="lazy">
-          <img src="assets/designs/realestate-las-vegas-luxury-gold.jpg" alt="Real Estate Las Vegas Campaign" loading="lazy">
-          <img src="assets/designs/calcperks-mortgage-campaign.jpg" alt="CalcPerks FinTech SaaS Ad" loading="lazy">
+          <img src="assets/designs/jaguar-vpn/03t.webp" width="352" height="520" alt="Jaguar VPN promo flyer" loading="lazy" decoding="async">
+          <img src="assets/designs/arwaan-rice/10t.webp" width="520" height="520" alt="Arwaan Rice bag packaging" loading="lazy" decoding="async">
+          <img src="assets/designs/zm-brand/07t.webp" width="520" height="520" alt="Zaheer Malik business card mockup" loading="lazy" decoding="async">
+          <img src="assets/designs/calcperks/02t.webp" width="436" height="520" alt="CalcPerks social media post" loading="lazy" decoding="async">
         </a>
       </div>
     </section>
@@ -1286,6 +1303,6 @@
     <small>© <span id="year"></span> Muhammad Zaheer Ul Din Babar. All rights reserved.</small>
   </footer>
 
-  <script src="assets/script.js?v=2026.12"></script>
+  <script src="assets/script.js?v=2026.13" defer></script>
 </body>
 </html>

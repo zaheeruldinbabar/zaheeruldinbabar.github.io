@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zaheeruldinbabar.github.io/sitemap.xml

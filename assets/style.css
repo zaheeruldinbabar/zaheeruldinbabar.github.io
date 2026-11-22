@@ -5389,3 +5389,282 @@ section,
     width: var(--target-width, 90%) !important;
   }
 }
+
+/* ==========================================================================
+   2026.13 — UX, ACCESSIBILITY & SPEED PASS
+   One clear action per section, readable small text, visible keyboard focus,
+   a real mouse pointer, and a WhatsApp button that stays out of the way.
+   ========================================================================== */
+
+/* ---- Skip link and keyboard focus ---- */
+.skip-link {
+  position: fixed;
+  left: 12px;
+  top: -64px;
+  z-index: 10050;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--cyan);
+  color: #04101c;
+  font: 700 13px 'Space Grotesk', sans-serif;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  border-radius: 8px;
+}
+
+.button:focus-visible,
+.filter-tab:focus-visible,
+.nav-contact:focus-visible {
+  outline-offset: 4px;
+}
+
+/* ---- Welcome screen: once per session ---- */
+.skip-welcome .welcome-screen {
+  display: none !important;
+}
+
+.skip-welcome body.welcome-locked {
+  overflow: visible !important;
+  height: auto;
+}
+
+.welcome-screen {
+  cursor: pointer;
+}
+
+/* ---- Real pointer stays visible; the ring follows it as an accent ---- */
+@media (pointer: fine) {
+  html,
+  body,
+  input,
+  textarea,
+  select,
+  .project-card,
+  .skill-card,
+  .spotlight-card {
+    cursor: auto !important;
+  }
+
+  a,
+  button,
+  summary,
+  label[for],
+  .project-card a,
+  .dz-card,
+  .pv-item {
+    cursor: pointer !important;
+  }
+
+  .pv-item {
+    cursor: zoom-in !important;
+  }
+
+  .custom-cursor-dot {
+    display: none !important;
+  }
+
+  .custom-cursor-ring {
+    width: 34px;
+    height: 34px;
+    margin-left: -17px;
+    margin-top: -17px;
+    border-color: rgba(90, 227, 241, 0.3);
+  }
+}
+
+/* ---- One primary button per row; the rest are quiet outlines ---- */
+.hero-actions .button:not(:first-child),
+.button.button-secondary {
+  background: rgba(15, 23, 42, 0.72);
+  color: #eaf2ff;
+  border: 1px solid rgba(148, 163, 184, 0.34);
+  box-shadow: none;
+}
+
+.hero-actions .button:not(:first-child)::after {
+  display: none;
+}
+
+.hero-actions .button:not(:first-child):hover,
+.button.button-secondary:hover {
+  background: rgba(90, 227, 241, 0.09);
+  border-color: var(--cyan);
+  color: var(--cyan);
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.hero-actions .copy-email-btn.is-copied {
+  border-color: var(--accent-emerald);
+  color: var(--accent-emerald);
+}
+
+/* ---- Small labels: nothing below 11.5px ---- */
+.eyebrow,
+.senior-tag,
+.scroll-cue,
+.metric-code,
+.metric-badge,
+.section-kicker,
+.timeline-loc,
+.current-pill,
+.role-badge,
+.live-status-pill,
+.external-mini,
+.private-label,
+.arch-term-status,
+.education-detail,
+.back-top,
+.role-tags span,
+.project-meta span,
+.tech-stack span,
+.credential small,
+.filter-tab small {
+  font-size: 11.5px;
+}
+
+.tag-list span,
+.timeline-date span,
+.skill-card-head .skill-pct,
+.arch-step-top .arch-step-num,
+.arch-step-top .arch-step-tag,
+.arch-term-bar .arch-term-title,
+.live-clock-pill span,
+.live-clock-pill strong,
+.hero-role-ticker .ticker-label,
+.hero-caption span {
+  font-size: 11.5px;
+}
+
+.tech-track span,
+.hero-socials .social-link,
+.metric-card .metric-label,
+.filter-tab span {
+  font-size: 12px;
+}
+
+.eyebrow,
+.section-kicker,
+.metric-code,
+.scroll-cue,
+.back-top {
+  letter-spacing: 0.1em;
+}
+
+.site-footer small {
+  font-size: 12px;
+}
+
+/* ---- Experience: latest roles first, older ones on request ---- */
+.timeline.is-collapsed .timeline-extra {
+  display: none;
+}
+
+.timeline-toggle-row {
+  display: flex;
+  justify-content: center;
+  margin: 26px 0 8px;
+}
+
+.timeline-toggle .btn-arrow {
+  transition: transform 0.25s var(--ease-out);
+}
+
+.timeline-toggle:hover .btn-arrow {
+  transform: translateY(2px);
+}
+
+.timeline-toggle.is-open .btn-arrow,
+.timeline-toggle.is-open:hover .btn-arrow {
+  transform: rotate(180deg);
+}
+
+/* ---- Floating WhatsApp: compact circle that never covers text ---- */
+.whatsapp-float {
+  right: 20px;
+  bottom: 20px;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  gap: 0;
+  justify-content: center;
+  overflow: hidden;
+  transition: width 0.3s var(--ease-out), transform 0.3s var(--ease-out), opacity 0.25s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float .wa-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.whatsapp-float .wa-label {
+  max-width: 0;
+  opacity: 0;
+  white-space: nowrap;
+  transition: max-width 0.3s var(--ease-out), opacity 0.2s ease, margin 0.3s var(--ease-out);
+}
+
+.whatsapp-float .wa-pulse {
+  inset: 0;
+  animation-iteration-count: 3;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .whatsapp-float:hover,
+  .whatsapp-float:focus-visible {
+    width: 156px;
+    transform: translateY(-3px);
+  }
+
+  .whatsapp-float:hover .wa-label,
+  .whatsapp-float:focus-visible .wa-label {
+    max-width: 100px;
+    opacity: 1;
+    margin-left: 9px;
+  }
+}
+
+.whatsapp-float.is-tucked {
+  opacity: 0;
+  transform: translateY(18px);
+  pointer-events: none;
+}
+
+.site-footer {
+  padding-bottom: 86px;
+}
+
+@media (max-width: 720px) {
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+  }
+
+  .whatsapp-float .wa-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ---- Design banner previews keep their shape while loading ---- */
+.dsb-preview-grid img {
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+}

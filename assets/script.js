@@ -9,9 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const progressFill = document.getElementById('welcomeProgressFill');
   const percentEl = document.getElementById('welcomePercent');
 
-  if (welcomeScreen) {
+  const skipWelcome = document.documentElement.classList.contains('skip-welcome');
+
+  if (welcomeScreen && skipWelcome) {
+    // Already seen this session (or reduced motion): go straight to the page.
+    welcomeScreen.style.display = 'none';
+    document.body.classList.remove('welcome-locked');
+  } else if (welcomeScreen) {
     let hasEntered = false;
-    const loadDuration = 2200;
+    const loadDuration = 1300;
     const startLoad = performance.now();
 
     function enterPortfolio() {
@@ -19,10 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
       hasEntered = true;
       welcomeScreen.classList.add('is-exiting');
       document.body.classList.remove('welcome-locked');
+      try { sessionStorage.setItem('zmWelcomeSeen', '1'); } catch (e) { /* private mode */ }
       setTimeout(() => {
         welcomeScreen.style.display = 'none';
       }, 850);
     }
+
+    // Any click or key press skips the wait.
+    welcomeScreen.addEventListener('click', enterPortfolio);
+    window.addEventListener('keydown', enterPortfolio, { once: true });
+    // Safety net: never leave the page locked if the loader animation cannot run.
+    setTimeout(enterPortfolio, 4000);
 
     function stepLoader(now) {
       if (hasEntered) return;
@@ -156,8 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       },
       {
-        threshold: 0.08,
-        rootMargin: '0px 0px -36px 0px'
+        // Start revealing just before an element enters the screen, so fast
+        // scrolling never shows an empty stretch of page.
+        threshold: 0.01,
+        rootMargin: '0px 0px 140px 0px'
       }
     );
 
@@ -422,102 +437,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 14. GRAPHIC DESIGN PORTFOLIO FILTER TABS & FULLSCREEN LIGHTBOX VIEWER (designs.html)
-  const designFilterBtns = document.querySelectorAll('.design-filter-btn');
-  const designCards = Array.from(document.querySelectorAll('#designGalleryGrid .design-card'));
+  // 14. EXPERIENCE TIMELINE: show the latest roles first, older ones on request
+  const timeline = document.getElementById('experienceTimeline');
+  const timelineToggle = document.getElementById('timelineToggle');
+  const timelineToggleText = document.getElementById('timelineToggleText');
 
-  if (designFilterBtns.length && designCards.length) {
-    designFilterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filterVal = btn.getAttribute('data-filter') || 'all';
-
-        designFilterBtns.forEach(b => {
-          const isCurrent = b === btn;
-          b.classList.toggle('active', isCurrent);
-          b.setAttribute('aria-selected', String(isCurrent));
-        });
-
-        designCards.forEach(card => {
-          const cat = card.getAttribute('data-category') || '';
-          const matches = filterVal === 'all' || cat === filterVal;
-          if (matches) {
-            card.classList.remove('is-filtered-out');
-            card.classList.add('visible');
-          } else {
-            card.classList.add('is-filtered-out');
-          }
-        });
+  if (timeline && timelineToggle) {
+    const extraCount = timeline.querySelectorAll('.timeline-extra').length;
+    if (extraCount > 0) {
+      timeline.classList.add('is-collapsed');
+      timelineToggle.hidden = false;
+      timelineToggle.addEventListener('click', () => {
+        const collapsed = timeline.classList.toggle('is-collapsed');
+        timelineToggle.setAttribute('aria-expanded', String(!collapsed));
+        timelineToggle.classList.toggle('is-open', !collapsed);
+        if (timelineToggleText) {
+          timelineToggleText.textContent = collapsed ? `Show ${extraCount} earlier roles` : 'Show fewer roles';
+        }
+        if (!collapsed) {
+          timeline.querySelectorAll('.timeline-extra').forEach(el => el.classList.add('visible'));
+        }
       });
-    });
+    }
   }
 
-  const lightbox = document.getElementById('designLightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const lightboxTitle = document.getElementById('lightboxTitle');
-  const lightboxCat = document.getElementById('lightboxCat');
-  const lightboxTools = document.getElementById('lightboxTools');
-  const lightboxClose = document.getElementById('lightboxClose');
-  const lightboxBackdrop = document.getElementById('lightboxBackdrop');
-  const lightboxPrev = document.getElementById('lightboxPrev');
-  const lightboxNext = document.getElementById('lightboxNext');
-
-  if (lightbox && designCards.length) {
-    let activeCardIndex = 0;
-
-    function getVisibleCards() {
-      return designCards.filter(c => !c.classList.contains('is-filtered-out'));
-    }
-
-    function openLightboxByCard(card) {
-      const visible = getVisibleCards();
-      activeCardIndex = Math.max(0, visible.indexOf(card));
-      renderLightboxCard(visible[activeCardIndex] || card);
-      lightbox.hidden = false;
-      document.body.style.overflow = 'hidden';
-    }
-
-    function renderLightboxCard(card) {
-      if (!card) return;
-      const src = card.getAttribute('data-src') || '';
-      const title = card.getAttribute('data-title') || '';
-      const cat = card.getAttribute('data-cat') || '';
-      const tools = card.getAttribute('data-tools') || '';
-
-      if (lightboxImg) {
-        lightboxImg.src = src;
-        lightboxImg.alt = title;
-      }
-      if (lightboxTitle) lightboxTitle.textContent = title;
-      if (lightboxCat) lightboxCat.textContent = cat;
-      if (lightboxTools) lightboxTools.textContent = tools;
-    }
-
-    function closeLightbox() {
-      lightbox.hidden = true;
-      document.body.style.overflow = '';
-    }
-
-    function stepLightbox(dir) {
-      const visible = getVisibleCards();
-      if (!visible.length) return;
-      activeCardIndex = (activeCardIndex + dir + visible.length) % visible.length;
-      renderLightboxCard(visible[activeCardIndex]);
-    }
-
-    designCards.forEach(card => {
-      card.addEventListener('click', () => openLightboxByCard(card));
-    });
-
-    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-    if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
-    if (lightboxPrev) lightboxPrev.addEventListener('click', () => stepLightbox(-1));
-    if (lightboxNext) lightboxNext.addEventListener('click', () => stepLightbox(1));
-
-    window.addEventListener('keydown', e => {
-      if (lightbox.hidden) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') stepLightbox(-1);
-      if (e.key === 'ArrowRight') stepLightbox(1);
-    });
+  // 15. FLOATING WHATSAPP BUTTON: step aside while the contact section is on screen
+  const waFloat = document.querySelector('.whatsapp-float');
+  const contactSection = document.getElementById('contact');
+  if (waFloat && contactSection && 'IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      entries.forEach(entry => waFloat.classList.toggle('is-tucked', entry.isIntersecting));
+    }, { threshold: 0.15 }).observe(contactSection);
   }
 });
