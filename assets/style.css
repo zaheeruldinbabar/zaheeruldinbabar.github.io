@@ -3982,6 +3982,327 @@ body.welcome-locked {
   }
 }
 
+/* ==========================================================================
+   2026 FLAGSHIP PRINCIPAL ENGINEER VISUAL OVERHAUL
+   Deep Obsidian Aurora Canvas, Holographic Gradients & 3D Bento Surfaces
+   ========================================================================== */
+
+body {
+  background-color: #03060e;
+  background-image:
+    radial-gradient(ellipse 85% 50% at 50% -8%, rgba(56, 189, 248, 0.16), rgba(99, 102, 241, 0.09) 45%, transparent 78%),
+    radial-gradient(ellipse 60% 40% at 90% 35%, rgba(90, 227, 241, 0.06), transparent 70%),
+    radial-gradient(ellipse 60% 45% at 10% 70%, rgba(129, 140, 248, 0.06), transparent 70%);
+}
+
+.bg-grid-overlay {
+  background-image:
+    radial-gradient(rgba(90, 227, 241, 0.12) 1px, transparent 1px),
+    linear-gradient(to right, rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px, 72px 72px, 72px 72px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 25%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 25%, #000 35%, transparent 100%);
+}
+
+/* Upgraded Eyebrow & Section Kickers as Glowing Cyber Capsules */
+.eyebrow {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.09);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  box-shadow: 0 0 22px rgba(52, 211, 153, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'JetBrains Mono', 'Space Grotesk', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: #6ee7b7;
+}
+
+.section-kicker {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(90, 227, 241, 0.1), rgba(129, 140, 248, 0.08));
+  border: 1px solid rgba(90, 227, 241, 0.26);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  font-family: 'JetBrains Mono', 'Space Grotesk', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+}
+
+/* Holographic Gradient Typography on Hero Name & Section Titles */
+.hero h1 .name-line {
+  background: linear-gradient(180deg, #ffffff 30%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, 0.45));
+}
+
+.hero h1 .cyan-line {
+  background: linear-gradient(95deg, #5ae3f1 0%, #38bdf8 35%, #818cf8 72%, #34d399 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: auroraTextFlow 7s ease-in-out infinite alternate;
+}
+
+.section-heading h2 span,
+.contact-inner h2 span {
+  background: linear-gradient(95deg, #5ae3f1 0%, #38bdf8 40%, #818cf8 85%, #34d399 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes auroraTextFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Upgraded Primary & Secondary Buttons */
+.button {
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #5ae3f1 0%, #38bdf8 55%, #818cf8 100%);
+  color: #030712;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.button-primary:hover {
+  background: linear-gradient(135deg, #7ef0fc 0%, #56ccf2 55%, #939dfa 100%);
+  box-shadow: 0 16px 40px rgba(90, 227, 241, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.button-secondary {
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Hero Social Links -> Interactive Frosted Glass Pills */
+.hero-socials {
+  gap: 10px;
+}
+
+.hero-socials .social-link {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #cbd5e1;
+  transition: all 0.25s var(--ease-out);
+}
+
+.hero-socials .social-link:hover {
+  background: rgba(90, 227, 241, 0.12);
+  border-color: var(--cyan);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(90, 227, 241, 0.22);
+  transform: translateY(-3px);
+}
+
+/* Portrait Frame -> Modern Executive Squircle/Arch & Clear Outer Floating Badges */
+.portrait-frame {
+  width: 300px;
+  border-radius: 34px;
+  padding: 8px;
+  background: linear-gradient(145deg, rgba(90, 227, 241, 0.55) 0%, rgba(129, 140, 248, 0.4) 50%, rgba(15, 23, 42, 0.95) 100%);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.78),
+    0 0 60px rgba(90, 227, 241, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.portrait {
+  border-radius: 27px;
+}
+
+.portrait-shine {
+  border-radius: 27px;
+}
+
+/* Push floating cards to the outer corners so the face is 100% unobstructed */
+.floating-a {
+  top: 22px;
+  left: -24px;
+}
+
+.floating-b {
+  right: -24px;
+  bottom: 42px;
+}
+
+/* Metrics Bar -> High-Contrast Bento Telemetry Cards with Top Laser Line */
+.metric-card {
+  position: relative;
+  text-align: left;
+  padding: 22px 22px;
+  border-radius: 20px;
+  background: linear-gradient(160deg, rgba(17, 27, 49, 0.88) 0%, rgba(8, 13, 25, 0.94) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.metric-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan), var(--accent-indigo), transparent);
+  opacity: 0.75;
+}
+
+.metric-value {
+  font-size: clamp(30px, 3.4vw, 42px);
+  background: linear-gradient(95deg, #ffffff 0%, #5ae3f1 55%, #818cf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 6px;
+}
+
+/* 01 / Professional Summary -> 3 Elevated 3D Glassmorphic Bento Cards */
+.about-facts {
+  border-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fact {
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  padding: 22px 24px;
+  border-radius: 20px;
+  background: linear-gradient(155deg, rgba(17, 27, 49, 0.86) 0%, rgba(9, 14, 28, 0.94) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s var(--ease-out), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fact:hover {
+  transform: translateY(-4px) translateX(4px);
+  border-color: rgba(90, 227, 241, 0.48);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.6), 0 0 28px rgba(90, 227, 241, 0.14);
+}
+
+.fact-number {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: linear-gradient(135deg, rgba(90, 227, 241, 0.16), rgba(129, 140, 248, 0.16));
+  border: 1px solid rgba(90, 227, 241, 0.38);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cyan);
+  box-shadow: 0 0 18px rgba(90, 227, 241, 0.18);
+}
+
+/* 02 / Professional Experience -> Glowing Laser Timeline & Glass Role Cards */
+.timeline::before {
+  width: 2px;
+  background: linear-gradient(180deg, #5ae3f1 0%, #818cf8 55%, rgba(148, 163, 184, 0.15) 100%);
+  box-shadow: 0 0 14px rgba(90, 227, 241, 0.45);
+}
+
+.timeline-date span {
+  display: inline-block;
+  width: fit-content;
+  padding: 5px 11px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(90, 227, 241, 0.22);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: #e2e8f0;
+}
+
+.timeline-content {
+  border-radius: 20px;
+  padding: 26px 28px;
+  background: linear-gradient(155deg, rgba(17, 27, 49, 0.9) 0%, rgba(8, 13, 26, 0.95) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-left: 3px solid rgba(129, 140, 248, 0.55);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.timeline-item.current .timeline-content {
+  border-left: 3px solid var(--cyan);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 32px rgba(90, 227, 241, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.role-tags span,
+.tag-list span {
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-family: 'JetBrains Mono', 'DM Sans', monospace;
+  font-size: 10.5px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(90, 227, 241, 0.2);
+  color: #cbd5e1;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.project-card:hover .tag-list span,
+.timeline-content:hover .role-tags span {
+  border-color: rgba(90, 227, 241, 0.38);
+  color: #ffffff;
+}
+
+/* 03 / Projects & 04 / Skills -> Specular Top Highlights & Deeper Glass Contrast */
+.project-card,
+.skill-card,
+.credential,
+.education-panel,
+.intern-card {
+  border-radius: 22px;
+  background: linear-gradient(160deg, rgba(17, 27, 49, 0.9) 0%, rgba(7, 12, 24, 0.96) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 720px) {
+  .portrait-frame {
+    width: 225px;
+    border-radius: 26px;
+  }
+  .portrait,
+  .portrait-shine {
+    border-radius: 20px;
+  }
+  .floating-a {
+    top: 6px;
+    left: 0;
+  }
+  .floating-b {
+    right: 0;
+    bottom: 12px;
+  }
+  .fact {
+    padding: 18px;
+  }
+  .timeline-content {
+    padding: 18px 20px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
