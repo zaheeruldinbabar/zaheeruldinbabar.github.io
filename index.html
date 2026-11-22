@@ -104,10 +104,18 @@
          ================================================================= -->
     <section class="hero section-wrap" id="home">
       <div class="hero-copy">
-        <div class="eyebrow animate-fade-in" style="--delay: 0.08s">
-          <span class="status-dot"></span> OPEN TO PROFESSIONAL OPPORTUNITIES
+        <div class="hero-badges-row animate-fade-in" style="--delay: 0.08s">
+          <div class="eyebrow">
+            <span class="status-dot"></span> OPEN TO PROFESSIONAL OPPORTUNITIES
+          </div>
+          <div class="live-clock-pill" aria-label="Current local time in Pakistan">
+            <span class="clock-icon">🌐</span>
+            <span>PKT (UTC+5) · <strong id="liveClock">LIVE</strong></span>
+          </div>
         </div>
-        <p class="hero-intro animate-fade-in" style="--delay: 0.16s">Hello, I'm</p>
+        <p class="hero-intro animate-fade-in" style="--delay: 0.16s">
+          Hello, I'm <span class="senior-tag">// SENIOR FULL-STACK &amp; IT ARCHITECT</span>
+        </p>
         <h1 class="animate-fade-in" style="--delay: 0.24s">
           <span class="name-line">Muhammad Zaheer</span>
           <span class="cyan-line">Ul Din Babar.</span>
@@ -115,6 +123,11 @@
         <h2 class="animate-fade-in" style="--delay: 0.32s">
           Full-Stack Web Developer <span class="accent">&amp;</span><br class="desktop-break"> Information Technology Professional
         </h2>
+        <div class="hero-role-ticker animate-fade-in" style="--delay: 0.36s">
+          <span class="ticker-prefix">&gt;_</span>
+          <span class="ticker-label">Specializing in</span>
+          <strong class="ticker-dynamic" id="roleTickerText">Production SaaS &amp; Full-Stack Web Ecosystems</strong>
+        </div>
         <p class="hero-description animate-fade-in" style="--delay: 0.40s">
           Strategic and results-driven <strong>Information Technology Professional</strong>, Full-Stack Developer, Graphic Designer, and IT Lecturer / Instructor with <strong>5+ years of professional experience</strong> across web development, software solutions, UI/UX, digital marketing, e-commerce, and academic &amp; technical leadership.
         </p>
@@ -160,6 +173,10 @@
             <img class="portrait" src="assets/profile.jpg" alt="Muhammad Zaheer Ul Din Babar — Full-Stack Developer & Information Technology Professional" fetchpriority="high">
             <div class="portrait-shine"></div>
             <div class="portrait-border-glow"></div>
+            <div class="portrait-status-bar">
+              <span class="p-status-dot"></span>
+              <span>SYS.ARCH // VERIFIED ENGINEER</span>
+            </div>
           </div>
         </div>
         <div class="floating-card card-code floating-a">
@@ -174,6 +191,13 @@
           <div>
             <strong>Design &amp; Leadership</strong>
             <small>UI/UX · Branding · Mentorship</small>
+          </div>
+        </div>
+        <div class="floating-card card-cloud floating-c">
+          <span class="mini-icon">☁</span>
+          <div>
+            <strong>9+ Live Systems</strong>
+            <small>SaaS · ERP · Cloud · AI</small>
           </div>
         </div>
         <div class="hero-caption">
@@ -227,18 +251,34 @@
     <section class="section-wrap metrics-section">
       <div class="metrics-grid">
         <div class="metric-card spotlight-card reveal" style="--delay: 0.05s">
+          <div class="metric-top-meta">
+            <span class="metric-code">01 // TENURE</span>
+            <span class="metric-badge">SENIOR</span>
+          </div>
           <div class="metric-value"><span data-count="5">5</span>+ Years</div>
           <div class="metric-label">Professional IT &amp; Development Experience</div>
         </div>
         <div class="metric-card spotlight-card reveal" style="--delay: 0.12s">
+          <div class="metric-top-meta">
+            <span class="metric-code">02 // CAREER TRACK</span>
+            <span class="metric-badge">GLOBAL</span>
+          </div>
           <div class="metric-value"><span data-count="7">7</span>+ Roles</div>
           <div class="metric-label">Global (USA, China) &amp; Local Leadership</div>
         </div>
         <div class="metric-card spotlight-card reveal" style="--delay: 0.19s">
+          <div class="metric-top-meta">
+            <span class="metric-code">03 // PRODUCTION</span>
+            <span class="metric-badge">DEPLOYED</span>
+          </div>
           <div class="metric-value"><span data-count="9">9</span>+ Systems</div>
           <div class="metric-label">Production Web Platforms &amp; Software</div>
         </div>
         <div class="metric-card spotlight-card reveal" style="--delay: 0.26s">
+          <div class="metric-top-meta">
+            <span class="metric-code">04 // CREDENTIAL</span>
+            <span class="metric-badge">HONORS</span>
+          </div>
           <div class="metric-value">BS IT</div>
           <div class="metric-label">University of the Punjab (2021–2025)</div>
         </div>
@@ -264,6 +304,24 @@
           <p>
             Independently architected and developed <strong>StackLabX</strong> and <strong>Weather-247</strong> end-to-end, while leading creative and technical teams for US, international, and Pakistani organizations, lecturing in Information Technology at college level, mentoring students, managing e-commerce operations (Amazon, Daraz, WordPress), and delivering high-quality software products.
           </p>
+
+          <!-- Senior Engineer System Architecture Console -->
+          <div class="arch-terminal spotlight-card">
+            <div class="arch-term-bar">
+              <div class="slx-dots"><i></i><i></i><i></i></div>
+              <span class="arch-term-title">zaheer@architecture-core:~/engineer-profile.ts</span>
+              <span class="arch-term-status">● PRODUCTION READY</span>
+            </div>
+            <div class="arch-term-body">
+              <div class="code-line"><span class="c-num">01</span><span class="c-kw">export const</span> <span class="c-var">engineerProfile</span> = {</div>
+              <div class="code-line"><span class="c-num">02</span>  <span class="c-prop">architect</span>: <span class="c-str">"Muhammad Zaheer Ul Din Babar (Zaheer Malik)"</span>,</div>
+              <div class="code-line"><span class="c-num">03</span>  <span class="c-prop">experience</span>: <span class="c-str">"5+ Years (Full-Stack, Cloud, UI/UX &amp; IT Leadership)"</span>,</div>
+              <div class="code-line"><span class="c-num">04</span>  <span class="c-prop">coreStack</span>: [<span class="c-str">"Next.js"</span>, <span class="c-str">"TypeScript"</span>, <span class="c-str">"Node.js"</span>, <span class="c-str">"Python/Django"</span>, <span class="c-str">"Laravel"</span>],</div>
+              <div class="code-line"><span class="c-num">05</span>  <span class="c-prop">infrastructure</span>: [<span class="c-str">"PostgreSQL"</span>, <span class="c-str">"Prisma"</span>, <span class="c-str">"Redis"</span>, <span class="c-str">"AWS"</span>, <span class="c-str">"Alibaba Cloud"</span>],</div>
+              <div class="code-line"><span class="c-num">06</span>  <span class="c-prop">currentRoles</span>: [<span class="c-str">"Manager &amp; Full-Stack Dev @ WEBSOFT"</span>, <span class="c-str">"IT Lecturer @ ACE"</span>]</div>
+              <div class="code-line"><span class="c-num">07</span>};</div>
+            </div>
+          </div>
         </div>
         <div class="about-facts">
           <div class="fact reveal" style="--delay: 0.08s">
@@ -512,9 +570,25 @@
         </p>
       </div>
 
-      <div class="project-grid">
+      <!-- Interactive Senior Engineering Domain Filter Tabs -->
+      <div class="project-filters reveal" role="tablist" aria-label="Filter projects by engineering domain">
+        <button type="button" class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
+          <span>All Systems</span> <small>9</small>
+        </button>
+        <button type="button" class="filter-tab" data-filter="saas" role="tab" aria-selected="false">
+          <span>Full-Stack &amp; Cloud SaaS</span> <small>3</small>
+        </button>
+        <button type="button" class="filter-tab" data-filter="erp" role="tab" aria-selected="false">
+          <span>ERP, POS &amp; FinTech</span> <small>4</small>
+        </button>
+        <button type="button" class="filter-tab" data-filter="ai" role="tab" aria-selected="false">
+          <span>AI, ML &amp; Creative Tech</span> <small>2</small>
+        </button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
         <!-- 01: STACKLABX (stacklabx.com) — FEATURED #1 -->
-        <article class="project-card project-featured spotlight-card reveal" style="--delay: 0.05s">
+        <article class="project-card project-featured spotlight-card reveal" data-category="saas ai" style="--delay: 0.05s">
           <div class="project-art art-stacklab">
             <div class="art-top">
               <span class="art-label">01 / SOLE DEVELOPER · FULL-STACK PLATFORM</span>
@@ -590,7 +664,7 @@
         </article>
 
         <!-- 02: WORKSHOP.STACKLABX.COM -->
-        <article class="project-card spotlight-card reveal" style="--delay: 0.08s">
+        <article class="project-card spotlight-card reveal" data-category="saas" style="--delay: 0.08s">
           <div class="project-art art-workshop">
             <div class="art-top">
               <span class="art-label">02 / EDTECH &amp; TRAINING HUB</span>
@@ -633,7 +707,7 @@
         </article>
 
         <!-- 03: ONLINE STOCK MANAGEMENT & INVOICE SYSTEM (nadeemcloth.com) -->
-        <article class="project-card spotlight-card reveal" style="--delay: 0.12s">
+        <article class="project-card spotlight-card reveal" data-category="erp" style="--delay: 0.12s">
           <div class="project-art art-stock">
             <div class="art-top">
               <span class="art-label">03 / ENTERPRISE ERP &amp; BILLING</span>
@@ -684,7 +758,7 @@
         </article>
 
         <!-- 04: UNIVERSAL BUSINESS POS SYSTEM -->
-        <article class="project-card spotlight-card reveal" style="--delay: 0.08s">
+        <article class="project-card spotlight-card reveal" data-category="erp" style="--delay: 0.08s">
           <div class="project-art art-pos">
             <div class="art-top">
               <span class="art-label">04 / RETAIL ARCHITECTURE</span>
@@ -728,7 +802,7 @@
         </article>
 
         <!-- 05: WEATHER-247 (FINAL YEAR PROJECT) -->
-        <article class="project-card spotlight-card reveal" style="--delay: 0.12s">
+        <article class="project-card spotlight-card reveal" data-category="ai saas" style="--delay: 0.12s">
           <div class="project-art art-weather">
             <div class="art-top">
               <span class="art-label">05 / FINAL YEAR PROJECT · AI WEATHER</span>
@@ -781,7 +855,7 @@
         </article>
 
         <!-- 06: STACKWHEELS -->
-        <article class="project-card spotlight-card reveal" style="--delay: 0.08s">
+        <article class="project-card spotlight-card reveal" data-category="saas" style="--delay: 0.08s">
           <div class="project-art art-stackwheels">
             <div class="art-top">
               <span class="art-label">06 / AUTOMOTIVE MARKETPLACE</span>
@@ -826,7 +900,7 @@
         </article>
 
         <!-- 07: MIDDLEMAN (middleman.pk) -->
-        <article class="project-card spotlight-card reveal" style="--delay: 0.12s">
+        <article class="project-card spotlight-card reveal" data-category="erp" style="--delay: 0.12s">
           <div class="project-art art-middleman">
             <div class="art-top">
               <span class="art-label">07 / FINTECH ESCROW WORKFLOW</span>
@@ -872,7 +946,7 @@
         </article>
 
         <!-- 08: NEED-FOR-DESIGN (MODERN AI DESIGN STUDIO GRAPHIC) -->
-        <article class="project-card spotlight-card reveal" style="--delay: 0.08s">
+        <article class="project-card spotlight-card reveal" data-category="ai" style="--delay: 0.08s">
           <div class="project-art art-design">
             <div class="art-top">
               <span class="art-label">08 / CREATIVE AI ENGINE</span>
@@ -917,7 +991,7 @@
         </article>
 
         <!-- 09: WEBSOFT INVOICE GENERATOR (MODERN DOCUMENT ENGINE GRAPHIC) -->
-        <article class="project-card spotlight-card reveal" style="--delay: 0.12s">
+        <article class="project-card spotlight-card reveal" data-category="erp" style="--delay: 0.12s">
           <div class="project-art art-invoice">
             <div class="art-top">
               <span class="art-label">09 / DOCUMENT AUTOMATION</span>
@@ -967,43 +1041,103 @@
          04 / TECHNICAL SKILLS & CORE COMPETENCIES
          ================================================================= -->
     <section class="section-wrap section-block" id="skills">
-      <div class="section-heading reveal">
-        <p class="section-kicker"><span class="kicker-line"></span> 04 / TECHNICAL SKILLS &amp; CORE COMPETENCIES</p>
-        <h2>Full-spectrum capabilities<br><span>from code to cloud &amp; brand.</span></h2>
+      <div class="section-heading heading-row reveal">
+        <div>
+          <p class="section-kicker"><span class="kicker-line"></span> 04 / TECHNICAL SKILLS &amp; ENGINEERING ARCHITECTURE</p>
+          <h2>Full-spectrum capabilities<br><span>from code to cloud &amp; brand.</span></h2>
+        </div>
+        <p class="heading-note">
+          Battle-tested production workflow combining clean system architecture, modern TypeScript/Python stacks, cloud infrastructure, and executive design leadership.
+        </p>
       </div>
+
+      <!-- 4-Stage Senior Engineering Lifecycle Pipeline -->
+      <div class="arch-pipeline-grid reveal">
+        <div class="arch-step spotlight-card">
+          <div class="arch-step-top">
+            <span class="arch-step-num">STAGE 01</span>
+            <span class="arch-step-tag">DISCOVERY &amp; UI/UX</span>
+          </div>
+          <h4>System Design &amp; Prototyping</h4>
+          <p>Figma wireframes, database schema modeling, REST API contracts, and scalable design systems.</p>
+        </div>
+        <div class="arch-step spotlight-card">
+          <div class="arch-step-top">
+            <span class="arch-step-num">STAGE 02</span>
+            <span class="arch-step-tag">FULL-STACK CORE</span>
+          </div>
+          <h4>Frontend &amp; Backend Engineering</h4>
+          <p>Next.js, React, TypeScript, Node.js, Python/Django, and PHP/Laravel with clean modular code.</p>
+        </div>
+        <div class="arch-step spotlight-card">
+          <div class="arch-step-top">
+            <span class="arch-step-num">STAGE 03</span>
+            <span class="arch-step-tag">DATA &amp; AI PIPELINES</span>
+          </div>
+          <h4>Persistence, Caching &amp; ML</h4>
+          <p>PostgreSQL, MySQL, Prisma ORM, Redis caching, Celery async queues, and Scikit-learn ML models.</p>
+        </div>
+        <div class="arch-step spotlight-card">
+          <div class="arch-step-top">
+            <span class="arch-step-num">STAGE 04</span>
+            <span class="arch-step-tag">CLOUD &amp; DEVOPS</span>
+          </div>
+          <h4>Production Cloud Deployment</h4>
+          <p>AWS &amp; Alibaba Cloud infrastructure, Nginx/Gunicorn reverse proxies, SSL security, and monitoring.</p>
+        </div>
+      </div>
+
       <div class="skills-grid">
         <div class="skill-card spotlight-card reveal" style="--delay: 0.05s">
-          <span class="skill-icon">&lt;/&gt;</span>
+          <div class="skill-card-head">
+            <span class="skill-icon">&lt;/&gt;</span>
+            <span class="skill-pct">96% · EXPERT</span>
+          </div>
           <h3>Frontend Development</h3>
           <p>HTML5 · CSS3 · JavaScript (ES6+) · React · Next.js · TypeScript · Bootstrap · Tailwind CSS</p>
           <div class="skill-meter"><span style="--target-width: 96%;"></span></div>
         </div>
         <div class="skill-card spotlight-card reveal" style="--delay: 0.10s">
-          <span class="skill-icon">⌘</span>
+          <div class="skill-card-head">
+            <span class="skill-icon">⌘</span>
+            <span class="skill-pct">92% · SENIOR</span>
+          </div>
           <h3>Backend &amp; Databases</h3>
           <p>Node.js · Python · Django · PHP · Laravel · REST APIs · PostgreSQL · MySQL · SQLite · Prisma ORM</p>
           <div class="skill-meter"><span style="--target-width: 92%;"></span></div>
         </div>
         <div class="skill-card spotlight-card reveal" style="--delay: 0.15s">
-          <span class="skill-icon">☁</span>
+          <div class="skill-card-head">
+            <span class="skill-icon">☁</span>
+            <span class="skill-pct">89% · PRODUCTION</span>
+          </div>
           <h3>Cloud, Deployment &amp; Tools</h3>
           <p>AWS · Alibaba Cloud · Gunicorn · Nginx · Git &amp; GitHub · Redis · Celery · Stripe · OpenWeatherMap API</p>
           <div class="skill-meter"><span style="--target-width: 89%;"></span></div>
         </div>
         <div class="skill-card spotlight-card reveal" style="--delay: 0.20s">
-          <span class="skill-icon">✳</span>
+          <div class="skill-card-head">
+            <span class="skill-icon">✳</span>
+            <span class="skill-pct">88% · SPECIALIST</span>
+          </div>
           <h3>AI/ML, CMS &amp; E-Commerce</h3>
           <p>Scikit-learn · Pandas · NumPy · WordPress · Headless CMS · Amazon &amp; Daraz Store Management · SEO &amp; Digital Marketing</p>
           <div class="skill-meter"><span style="--target-width: 88%;"></span></div>
         </div>
         <div class="skill-card spotlight-card reveal" style="--delay: 0.25s">
-          <span class="skill-icon">◈</span>
+          <div class="skill-card-head">
+            <span class="skill-icon">◈</span>
+            <span class="skill-pct">95% · CERTIFIED</span>
+          </div>
           <h3>Graphic &amp; UI/UX Design</h3>
           <p>Adobe Photoshop · Adobe Illustrator · Figma · Canva · CorelDRAW · UI/UX Design · Brand Identity Systems</p>
           <div class="skill-meter"><span style="--target-width: 95%;"></span></div>
         </div>
         <div class="skill-card spotlight-card reveal" style="--delay: 0.30s">
-          <span class="skill-icon">↗</span>
+          <div class="skill-card-head">
+            <span class="skill-icon">↗</span>
+            <span class="skill-pct">95% · EXECUTIVE</span>
+          </div>
           <h3>Core Leadership Competencies</h3>
           <p>Project Management · Team Leadership · Client Communication · Problem Solving · Technical Training &amp; Mentorship</p>
           <div class="skill-meter"><span style="--target-width: 95%;"></span></div>
@@ -1056,6 +1190,10 @@
          ================================================================= -->
     <section class="contact-section" id="contact">
       <div class="section-wrap contact-inner">
+        <div class="contact-availability-pill reveal">
+          <span class="status-dot"></span>
+          <span>AVAILABLE FOR FULL-STACK ENGINEERING, SOFTWARE ARCHITECTURE &amp; IT LEADERSHIP · AVG RESPONSE &lt; 2 HRS</span>
+        </div>
         <p class="section-kicker reveal"><span class="kicker-line"></span> 06 / GET IN TOUCH</p>
         <h2 class="reveal">Have a project or role in mind?<br><span>Let's build something exceptional.</span></h2>
         <p class="contact-description reveal">
@@ -1068,6 +1206,9 @@
           <a class="button button-primary magnetic-btn" href="mailto:zaheeruldin978@gmail.com?subject=Portfolio%20Inquiry%20%E2%80%94%20Muhammad%20Zaheer%20Ul%20Din%20Babar">
             <span>Email Me Directly</span> <span class="btn-arrow">↗</span>
           </a>
+          <button type="button" class="button button-secondary magnetic-btn copy-email-btn" id="copyEmailBtn" data-email="zaheeruldin978@gmail.com">
+            <span id="copyEmailText">Copy Email Address</span> <span class="btn-arrow" id="copyEmailIcon">⧉</span>
+          </button>
           <a class="button button-secondary magnetic-btn" href="https://www.linkedin.com/in/zaheer-ul-din-babar/" target="_blank" rel="noopener">
             <span>LinkedIn Profile</span> <span class="btn-arrow">↗</span>
           </a>

@@ -315,4 +315,110 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // 10. LIVE PAKISTAN STANDARD TIME (PKT UTC+5) CLOCK IN HERO
+  const liveClockEl = document.getElementById('liveClock');
+  if (liveClockEl) {
+    function updateClock() {
+      try {
+        const formatter = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'Asia/Karachi',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: true
+        });
+        liveClockEl.textContent = formatter.format(new Date());
+      } catch (err) {
+        liveClockEl.textContent = new Date().toLocaleTimeString();
+      }
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  }
+
+  // 11. DYNAMIC SENIOR ENGINEERING SPECIALIZATION TICKER
+  const roleTickerEl = document.getElementById('roleTickerText');
+  if (roleTickerEl && !reduceMotion) {
+    const roles = [
+      'Production SaaS & Full-Stack Web Ecosystems',
+      'Next.js, React, TypeScript & Node.js Architecture',
+      'Python, Django, PostgreSQL & AI/ML Pipelines',
+      'Enterprise ERP, POS & Cloud Infrastructure',
+      'UI/UX Systems, Brand Identity & IT Lecturing'
+    ];
+    let roleIdx = 0;
+    setInterval(() => {
+      roleTickerEl.classList.add('is-switching');
+      setTimeout(() => {
+        roleIdx = (roleIdx + 1) % roles.length;
+        roleTickerEl.textContent = roles[roleIdx];
+        roleTickerEl.classList.remove('is-switching');
+      }, 260);
+    }, 3000);
+  }
+
+  // 12. INTERACTIVE PROJECT CATEGORY FILTER TABS
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const projectCards = document.querySelectorAll('#projectGrid .project-card');
+
+  if (filterTabs.length && projectCards.length) {
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const filterVal = tab.getAttribute('data-filter') || 'all';
+
+        filterTabs.forEach(t => {
+          const isCurrent = t === tab;
+          t.classList.toggle('active', isCurrent);
+          t.setAttribute('aria-selected', String(isCurrent));
+        });
+
+        projectCards.forEach(card => {
+          const categories = (card.getAttribute('data-category') || '').split(/\s+/);
+          const matches = filterVal === 'all' || categories.includes(filterVal);
+
+          if (matches) {
+            card.classList.remove('is-filtered-out');
+            card.classList.add('visible');
+          } else {
+            card.classList.add('is-filtered-out');
+          }
+        });
+      });
+    });
+  }
+
+  // 13. ONE-CLICK COPY EMAIL ADDRESS BUTTON
+  const copyEmailBtn = document.getElementById('copyEmailBtn');
+  const copyEmailText = document.getElementById('copyEmailText');
+  const copyEmailIcon = document.getElementById('copyEmailIcon');
+
+  if (copyEmailBtn && copyEmailText) {
+    copyEmailBtn.addEventListener('click', async () => {
+      const email = copyEmailBtn.getAttribute('data-email') || 'zaheeruldin978@gmail.com';
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(email);
+        } else {
+          const tempInput = document.createElement('input');
+          tempInput.value = email;
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand('copy');
+          document.body.removeChild(tempInput);
+        }
+        copyEmailBtn.classList.add('is-copied');
+        copyEmailText.textContent = 'Copied: zaheeruldin978@gmail.com';
+        if (copyEmailIcon) copyEmailIcon.textContent = '✓';
+
+        setTimeout(() => {
+          copyEmailBtn.classList.remove('is-copied');
+          copyEmailText.textContent = 'Copy Email Address';
+          if (copyEmailIcon) copyEmailIcon.textContent = '⧉';
+        }, 2600);
+      } catch (e) {
+        window.location.href = `mailto:${email}`;
+      }
+    });
+  }
 });
