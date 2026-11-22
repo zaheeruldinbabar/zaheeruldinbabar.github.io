@@ -4278,28 +4278,509 @@ body {
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
+/* ==========================================================================
+   COLORFUL MULTI-TONE GRADIENT CTA BUTTONS
+   ========================================================================== */
+.button-violet {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 52%, #d946ef 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: 0 12px 28px rgba(139, 92, 246, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.button-violet:hover {
+  background: linear-gradient(135deg, #7c7ff7 0%, #9f75ff 52%, #e862fc 100%);
+  color: #ffffff;
+  box-shadow: 0 16px 38px rgba(168, 85, 247, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  transform: translateY(-3px);
+}
+
+.button-emerald {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #06b6d4 100%);
+  color: #03120e;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.button-emerald:hover {
+  background: linear-gradient(135deg, #55e3ad 0%, #22cc94 50%, #22d3ee 100%);
+  color: #03120e;
+  box-shadow: 0 16px 38px rgba(16, 185, 129, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transform: translateY(-3px);
+}
+
+.button-royal {
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 55%, #4f46e5 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.button-royal:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 55%, #6366f1 100%);
+  color: #ffffff;
+  box-shadow: 0 16px 38px rgba(37, 99, 235, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   COMPREHENSIVE MOBILE RESPONSIVE FIXES FOR ALL BLOCKS, WORDS, BOXES & CARDS
+   ========================================================================== */
 @media (max-width: 720px) {
-  .portrait-frame {
-    width: 225px;
-    border-radius: 26px;
+  .section-wrap {
+    padding-left: 16px;
+    padding-right: 16px;
   }
-  .portrait,
-  .portrait-shine {
+
+  .section-block {
+    padding-top: 64px;
+    padding-bottom: 28px;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  /* 1. Section Kickers, Eyebrow & Availability Badges — Clean Wrapping without Pill Distortion */
+  .eyebrow,
+  .section-kicker,
+  .contact-availability-pill {
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 6px 11px;
+    font-size: 9px;
+    letter-spacing: 0.09em;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .kicker-line {
+    width: 14px;
+  }
+
+  .section-heading h2,
+  .contact-inner h2 {
+    font-size: clamp(24px, 7vw, 34px);
+    line-height: 1.18;
+    letter-spacing: -0.03em;
+    word-break: break-word;
+  }
+
+  .heading-note {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  /* 2. Hero Intro, Senior Tag, Role Ticker & Colorful Buttons on Mobile */
+  .hero-intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 14.5px;
+    margin-bottom: 8px;
+  }
+
+  .senior-tag {
+    margin-left: 0;
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
+  }
+
+  .hero-role-ticker {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    padding: 10px 13px;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .ticker-prefix {
+    display: none;
+  }
+
+  .ticker-label {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .ticker-dynamic {
+    font-size: 12.5px;
+    line-height: 1.38;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-top: 22px;
+  }
+
+  .hero-actions > .button:first-child {
+    grid-column: span 2;
+  }
+
+  .contact-inner .hero-actions > .button:last-child {
+    grid-column: span 2;
+  }
+
+  .button {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 12.5px;
+    border-radius: 11px;
+    text-align: center;
+  }
+
+  .hero-socials {
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .hero-socials .social-link {
+    padding: 6px 11px;
+    font-size: 11px;
+  }
+
+  /* 3. Hero Portrait & Floating Badges on Mobile (Zero Overflow / Zero Face Overlap) */
+  .hero-visual {
+    height: 330px;
+    margin-top: 8px;
+    overflow: hidden;
     border-radius: 20px;
   }
+
+  .portrait-frame {
+    width: 210px;
+    border-radius: 24px;
+  }
+
+  .portrait,
+  .portrait-shine {
+    border-radius: 18px;
+  }
+
+  .orbit-one { width: 260px; height: 260px; }
+  .orbit-two { width: 285px; height: 235px; }
+  .orbit-three { width: 215px; height: 215px; }
+
   .floating-a {
     top: 6px;
-    left: 0;
+    left: 2px;
   }
+
   .floating-b {
-    right: 0;
-    bottom: 12px;
+    right: 2px;
+    bottom: 18px;
   }
+
+  .floating-card {
+    padding: 7px 10px;
+    gap: 8px;
+    border-radius: 11px;
+  }
+
+  /* 4. Executive Metrics 2x2 Bento Grid on Mobile */
+  .metrics-section {
+    padding-top: 32px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .metric-card {
+    padding: 15px 13px;
+    border-radius: 16px;
+  }
+
+  .metric-top-meta {
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+
+  .metric-code {
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+  }
+
+  .metric-badge {
+    font-size: 7.5px;
+    padding: 2px 6px;
+  }
+
+  .metric-value {
+    font-size: clamp(22px, 6.2vw, 28px);
+  }
+
+  .metric-label {
+    font-size: 11px;
+    line-height: 1.38;
+  }
+
+  /* 5. Professional Summary, TypeScript Terminal & Bento Fact Cards on Mobile */
+  .large-copy {
+    font-size: 17.5px;
+    line-height: 1.52;
+  }
+
+  .arch-terminal {
+    margin-top: 20px;
+    border-radius: 14px;
+  }
+
+  .arch-term-bar {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .arch-term-title {
+    font-size: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .arch-term-status {
+    font-size: 8.5px;
+  }
+
+  .arch-term-body {
+    padding: 12px;
+    font-size: 11px;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+
+  .code-line {
+    white-space: normal;
+    word-break: break-word;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+
   .fact {
-    padding: 18px;
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 16px;
   }
+
+  .fact-number {
+    width: 38px;
+    height: 38px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  .fact strong {
+    font-size: 15.5px;
+    line-height: 1.35;
+  }
+
+  .fact p {
+    font-size: 12.5px;
+    line-height: 1.62;
+  }
+
+  /* 6. Experience Timeline, Education & Internships on Mobile */
   .timeline-content {
-    padding: 18px 20px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .timeline-content h3 {
+    font-size: 15.5px;
+    line-height: 1.35;
+  }
+
+  .cv-list {
+    font-size: 12.5px;
+    line-height: 1.65;
+    padding-left: 16px;
+    gap: 6px;
+  }
+
+  .role-tags span,
+  .tag-list span {
+    font-size: 9.5px;
+    padding: 3px 9px;
+  }
+
+  .education-panel,
+  .intern-card,
+  .credential {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .education-panel h3,
+  .intern-card h3,
+  .credential h3 {
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  /* 7. Project Filter Tabs & All 9 Project Cards/Graphics on Mobile */
+  .project-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .filter-tab {
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 11px;
+    font-size: 11px;
+    border-radius: 10px;
+  }
+
+  .project-card {
+    border-radius: 18px;
+  }
+
+  .project-art,
+  .project-featured .project-art {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .art-top {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .art-label {
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+  }
+
+  .live-status-pill,
+  .ws-live-badge,
+  .erp-status,
+  .mm-secure-tag,
+  .nfd-gen-pill,
+  .inv-paid-badge,
+  .inv-export-chip,
+  .live-btn,
+  .private-label {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .slx-browser-bar {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .slx-url-pill {
+    padding: 3px 9px;
+    font-size: 10px;
+  }
+
+  .slx-brand-title {
+    font-size: 24px;
+  }
+
+  .slx-core-orb {
+    width: 48px;
+    height: 48px;
+  }
+
+  .gfx-card-frame {
+    padding: 12px;
+    gap: 9px;
+  }
+
+  .sw-main-row {
+    gap: 12px;
+  }
+
+  .wheels-gauge {
+    width: 64px;
+    height: 64px;
+  }
+
+  .wheels-brand {
+    font-size: 19px;
+  }
+
+  .mm-title {
+    font-size: 16px;
+  }
+
+  .mm-pipeline {
+    padding: 8px;
+    gap: 4px;
+  }
+
+  .mm-node {
+    flex-direction: column;
+    gap: 3px;
+    text-align: center;
+  }
+
+  .mm-node small {
+    font-size: 8.5px;
+  }
+
+  .nfd-hero-text {
+    font-size: 14px;
+  }
+
+  .inv-line {
+    font-size: 9.5px;
+    padding: 5px 8px;
+    gap: 8px;
+  }
+
+  .project-content {
+    padding: 16px;
+  }
+
+  .project-meta {
+    gap: 6px;
+    font-size: 8.5px;
+    letter-spacing: 0.08em;
+  }
+
+  .project-content h3 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .project-content > p {
+    font-size: 12.5px;
+    line-height: 1.68;
+  }
+
+  /* 8. Skills & Contact on Mobile */
+  .skill-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .skill-card h3 {
+    font-size: 16.5px;
+  }
+
+  .contact-inner {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 }
 
