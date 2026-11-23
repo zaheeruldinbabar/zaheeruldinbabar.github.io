@@ -1,0 +1,3297 @@
+{
+ "site": "https://zaheeruldinbabar.github.io/",
+ "marquee": [
+  [
+   [
+    "jaguar-vpn",
+    3
+   ],
+   [
+    "arwaan-rice",
+    10
+   ],
+   [
+    "calcperks",
+    1
+   ],
+   [
+    "middle-man",
+    1
+   ],
+   [
+    "ithub-grw",
+    18
+   ],
+   [
+    "zestiq-mina",
+    3
+   ],
+   [
+    "stacklabx",
+    7
+   ],
+   [
+    "tevta",
+    2
+   ],
+   [
+    "etisalat",
+    10
+   ],
+   [
+    "zm-brand",
+    7
+   ],
+   [
+    "top-shop",
+    4
+   ]
+  ],
+  [
+   [
+    "jaguar-vpn",
+    11
+   ],
+   [
+    "calcperks",
+    30
+   ],
+   [
+    "arwaan-rice",
+    5
+   ],
+   [
+    "ithub-grw",
+    21
+   ],
+   [
+    "websoft",
+    3
+   ],
+   [
+    "flyers",
+    5
+   ],
+   [
+    "realestate",
+    2
+   ],
+   [
+    "diapers-mall",
+    2
+   ],
+   [
+    "electric",
+    4
+   ],
+   [
+    "channel-art",
+    1
+   ],
+   [
+    "logo-collection",
+    1
+   ],
+   [
+    "vector",
+    2
+   ]
+  ]
+ ],
+ "projects": [
+  {
+   "slug": "jaguar-vpn",
+   "title": "Jaguar VPN",
+   "kind": "Brand Mark, App Interface & Launch Creatives",
+   "desc": "Complete work for the Jaguar VPN app: the jaguar emblem and wordmark, the desktop and phone app interface, store screenshots, feature banners and QR flyers, all on one neon-blue visual system.",
+   "tags": [
+    "Logo & emblem",
+    "App interface",
+    "Store screenshots",
+    "Promo flyers"
+   ],
+   "accent": "#22b8ff",
+   "notes": [
+    "One neon-blue palette on near-black ties the emblem, store screenshots and banners together.",
+    "Every screenshot leads with a two-line benefit headline above the device, so the feature reads before the interface.",
+    "Phone and desktop sets mirror each other, so one campaign covers both formats."
+   ],
+   "cover": 15,
+   "items": [
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     208,
+     1400,
+     560
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     736,
+     1054,
+     1492
+    ],
+    [
+     520,
+     696,
+     1084,
+     1451
+    ],
+    [
+     520,
+     695,
+     1085,
+     1450
+    ],
+    [
+     520,
+     695,
+     1085,
+     1450
+    ],
+    [
+     520,
+     695,
+     1085,
+     1450
+    ],
+    [
+     520,
+     695,
+     1085,
+     1450
+    ],
+    [
+     520,
+     693,
+     1086,
+     1448
+    ],
+    [
+     520,
+     695,
+     1085,
+     1450
+    ],
+    [
+     520,
+     695,
+     1085,
+     1450
+    ],
+    [
+     520,
+     696,
+     1084,
+     1451
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     325,
+     1400,
+     876
+    ],
+    [
+     520,
+     347,
+     1400,
+     933
+    ],
+    [
+     520,
+     165,
+     1400,
+     446
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     325,
+     1400,
+     875
+    ],
+    [
+     520,
+     326,
+     1400,
+     878
+    ],
+    [
+     520,
+     326,
+     1400,
+     877
+    ],
+    [
+     405,
+     900,
+     810,
+     1800
+    ],
+    [
+     405,
+     900,
+     810,
+     1800
+    ],
+    [
+     405,
+     900,
+     810,
+     1800
+    ],
+    [
+     405,
+     900,
+     810,
+     1800
+    ],
+    [
+     405,
+     900,
+     810,
+     1800
+    ],
+    [
+     405,
+     900,
+     810,
+     1800
+    ]
+   ],
+   "types": [
+    "logo",
+    "logo",
+    "flyer",
+    "flyer",
+    "flyer",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "banner",
+    "banner",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui"
+   ],
+   "brand": true,
+   "trio": [
+    3,
+    15,
+    24
+   ]
+  },
+  {
+   "slug": "arwaan-rice",
+   "title": "Arwaan Rice",
+   "kind": "Logo & Rice Bag Packaging",
+   "desc": "Brand mark and 5 kg bag design for Arwaan 1121 Steam Basmati Rice, shown flat and in product mockups for retail and online listings.",
+   "tags": [
+    "Logo design",
+    "Bag packaging",
+    "Product mockups"
+   ],
+   "accent": "#d4a84f",
+   "notes": [
+    "A gold wheat mark and serif wordmark set a premium tone for an everyday product.",
+    "The bag front keeps variety, weight and nutrition facts in one clear column for shelf reading.",
+    "Mockups on dark and natural backgrounds show the pack for retail and online listings."
+   ],
+   "cover": 10,
+   "items": [
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     614,
+     614
+    ],
+    [
+     520,
+     681,
+     1200,
+     1572
+    ],
+    [
+     520,
+     520,
+     1024,
+     1024
+    ],
+    [
+     520,
+     601,
+     1152,
+     1332
+    ],
+    [
+     520,
+     696,
+     1344,
+     1800
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1280,
+     1280
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     290,
+     1400,
+     781
+    ]
+   ],
+   "types": [
+    "logo",
+    "logo",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging"
+   ],
+   "brand": true,
+   "trio": [
+    10,
+    1,
+    5
+   ]
+  },
+  {
+   "slug": "calcperks",
+   "title": "CalcPerks",
+   "kind": "Social Media Campaign Series",
+   "desc": "A 59-post campaign for the CalcPerks calculator platform. Every post introduces one calculator, from mortgages and loans to BMI and GPA, using a consistent dark and light layout system.",
+   "tags": [
+    "59 social posts",
+    "Campaign system",
+    "FinTech & health topics"
+   ],
+   "accent": "#8b5cf6",
+   "notes": [
+    "The same header, headline and calculator preview repeat on every post, so the series reads as one campaign.",
+    "Dark and light versions keep the feed varied without leaving the purple palette.",
+    "Each post pairs a plain-language benefit with the real calculator screen."
+   ],
+   "cover": 1,
+   "items": [
+    [
+     520,
+     436,
+     1369,
+     1149
+    ],
+    [
+     520,
+     620,
+     1149,
+     1369
+    ],
+    [
+     520,
+     620,
+     1149,
+     1369
+    ],
+    [
+     520,
+     620,
+     1149,
+     1369
+    ],
+    [
+     520,
+     620,
+     1149,
+     1369
+    ],
+    [
+     520,
+     620,
+     1149,
+     1369
+    ],
+    [
+     520,
+     620,
+     1149,
+     1369
+    ],
+    [
+     520,
+     620,
+     1149,
+     1369
+    ],
+    [
+     520,
+     620,
+     1149,
+     1369
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     648,
+     1123,
+     1400
+    ],
+    [
+     520,
+     642,
+     1129,
+     1393
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     620,
+     1149,
+     1369
+    ],
+    [
+     520,
+     620,
+     1149,
+     1369
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     823,
+     997,
+     1577
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     520,
+     1254,
+     1254
+    ],
+    [
+     520,
+     436,
+     1369,
+     1149
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     686,
+     1092,
+     1440
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ]
+   ],
+   "types": [
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post"
+   ],
+   "brand": true,
+   "trio": [
+    2,
+    1,
+    30
+   ]
+  },
+  {
+   "slug": "middle-man",
+   "title": "Middle Man",
+   "kind": "Logo Kit & Brand Mark",
+   "desc": "Monogram logo system for Middle Man (middleman.pk): primary lockups, stacked and horizontal versions, single-colour marks and app icons across navy, copper and white palettes.",
+   "tags": [
+    "Monogram logo",
+    "Lockup variants",
+    "Colour system"
+   ],
+   "accent": "#c9895a",
+   "notes": [
+    "The M monogram doubles as a rising line, a nod to trade and growth.",
+    "Navy, copper and white versions cover dark, light and single-colour uses.",
+    "Stacked, horizontal and icon-only lockups cover web headers, app icons and print."
+   ],
+   "cover": 1,
+   "items": [
+    [
+     520,
+     333,
+     1400,
+     896
+    ],
+    [
+     520,
+     333,
+     1400,
+     896
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     333,
+     1400,
+     896
+    ],
+    [
+     520,
+     333,
+     1400,
+     896
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     369,
+     1000,
+     710
+    ],
+    [
+     520,
+     369,
+     1000,
+     710
+    ],
+    [
+     520,
+     371,
+     1400,
+     1000
+    ],
+    [
+     520,
+     129,
+     1400,
+     348
+    ]
+   ],
+   "types": [
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo"
+   ],
+   "brand": true,
+   "trio": [
+    3,
+    1,
+    2
+   ]
+  },
+  {
+   "slug": "ithub-grw",
+   "title": "IT Hub Gujranwala",
+   "kind": "Brand Identity & Social Media",
+   "desc": "Identity and ongoing social content for IT Hub GRW, a training institute: logo, letterhead, admission form, course announcements and service posts.",
+   "tags": [
+    "Logo & stationery",
+    "Course posts",
+    "Service posts",
+    "Infographics"
+   ],
+   "accent": "#22c55e",
+   "notes": [
+    "Green and blue brand colours carry from the logo through every post and document.",
+    "Course and service posts share one template: a photo panel and a bold headline.",
+    "Infographic posts break services into numbered steps for quick reading on a phone."
+   ],
+   "cover": 18,
+   "items": [
+    [
+     520,
+     566,
+     1400,
+     1524
+    ],
+    [
+     520,
+     410,
+     1400,
+     1104
+    ],
+    [
+     520,
+     735,
+     1273,
+     1800
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     735,
+     1273,
+     1800
+    ],
+    [
+     520,
+     382,
+     1400,
+     1030
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     737,
+     646,
+     916
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     582,
+     1400,
+     1568
+    ],
+    [
+     520,
+     436,
+     940,
+     788
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     250,
+     1400,
+     674
+    ],
+    [
+     520,
+     377,
+     1400,
+     1015
+    ],
+    [
+     520,
+     354,
+     1400,
+     954
+    ],
+    [
+     520,
+     689,
+     1359,
+     1800
+    ]
+   ],
+   "types": [
+    "logo",
+    "logo",
+    "stationery",
+    "post",
+    "stationery",
+    "banner",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "banner",
+    "post",
+    "post",
+    "post"
+   ],
+   "brand": true,
+   "trio": [
+    18,
+    1,
+    21
+   ]
+  },
+  {
+   "slug": "zestiq-mina",
+   "title": "Zestiq Foods & Mina Spices",
+   "kind": "Spice Label Packaging System",
+   "desc": "Wrap-around jar labels for two spice ranges. Each product keeps the same grid for nutrition facts, barcode and storage notes, while colour and illustration change per spice.",
+   "tags": [
+    "Label system",
+    "30+ product labels",
+    "Logo",
+    "Jar mockup"
+   ],
+   "accent": "#f28c28",
+   "notes": [
+    "One label grid serves the whole range: product name centred, nutrition facts right, storage notes left.",
+    "A single background colour per spice makes jars easy to tell apart on a shelf.",
+    "A small product illustration sits beside each name, so the contents read at a glance."
+   ],
+   "cover": 3,
+   "items": [
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1280,
+     1280
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ],
+    [
+     520,
+     149,
+     1400,
+     402
+    ]
+   ],
+   "types": [
+    "logo",
+    "logo",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging",
+    "packaging"
+   ],
+   "brand": true,
+   "trio": [
+    3,
+    1,
+    2
+   ]
+  },
+  {
+   "slug": "stacklabx",
+   "title": "StackLab X",
+   "kind": "Brand Marks, Workshop Flyers & Blog Covers",
+   "desc": "Visual work for StackLab X: the X emblem and app icons, flyers for student workshops, a platform poster and a cover-image series for technical blog articles.",
+   "tags": [
+    "Emblem & app icon",
+    "Workshop flyers",
+    "Blog cover series"
+   ],
+   "accent": "#3b82f6",
+   "notes": [
+    "The angular X emblem is drawn in electric blue for the icon and flat white for single-colour use.",
+    "Workshop flyers stack headline, curriculum and registration details in the same order every time.",
+    "Blog covers share a dark tech backdrop and a centred title bar for a consistent article feed."
+   ],
+   "cover": 2,
+   "items": [
+    [
+     520,
+     520,
+     938,
+     938
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     735,
+     1055,
+     1491
+    ],
+    [
+     520,
+     735,
+     1055,
+     1491
+    ],
+    [
+     520,
+     735,
+     1055,
+     1491
+    ],
+    [
+     520,
+     735,
+     1055,
+     1491
+    ],
+    [
+     520,
+     735,
+     1055,
+     1491
+    ],
+    [
+     520,
+     735,
+     1055,
+     1491
+    ],
+    [
+     520,
+     735,
+     1055,
+     1491
+    ],
+    [
+     520,
+     291,
+     1400,
+     784
+    ],
+    [
+     520,
+     291,
+     1400,
+     784
+    ],
+    [
+     520,
+     291,
+     1400,
+     784
+    ],
+    [
+     520,
+     291,
+     1400,
+     784
+    ],
+    [
+     520,
+     296,
+     1400,
+     798
+    ],
+    [
+     520,
+     296,
+     1400,
+     798
+    ],
+    [
+     520,
+     291,
+     1400,
+     784
+    ],
+    [
+     520,
+     296,
+     1400,
+     798
+    ]
+   ],
+   "types": [
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "flyer",
+    "flyer",
+    "flyer",
+    "flyer",
+    "flyer",
+    "flyer",
+    "flyer",
+    "flyer",
+    "banner",
+    "banner",
+    "banner",
+    "banner",
+    "banner",
+    "banner",
+    "banner",
+    "banner"
+   ],
+   "brand": true,
+   "trio": [
+    7,
+    2,
+    14
+   ]
+  },
+  {
+   "slug": "tevta",
+   "title": "TEVTA — CM Punjab Skills Program",
+   "kind": "Admission Campaign",
+   "desc": "Urdu and English admission creatives for free Graphic Design and UI/UX courses at a TEVTA institute: square posts, wide banners and a billboard mockup.",
+   "tags": [
+    "Urdu typography",
+    "Social posts",
+    "Banner & billboard"
+   ],
+   "accent": "#16a34a",
+   "notes": [
+    "Urdu headlines lead, with English course names set as high-contrast labels.",
+    "Green and white dominate, with orange and purple reserved for dates and calls to action.",
+    "Layouts were adapted for square posts, wide banners and a roadside billboard."
+   ],
+   "cover": 2,
+   "items": [
+    [
+     520,
+     368,
+     1400,
+     990
+    ],
+    [
+     520,
+     520,
+     1080,
+     1079
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     368,
+     1400,
+     990
+    ],
+    [
+     520,
+     368,
+     1280,
+     905
+    ],
+    [
+     520,
+     368,
+     1400,
+     990
+    ],
+    [
+     520,
+     293,
+     1400,
+     788
+    ],
+    [
+     520,
+     293,
+     1400,
+     788
+    ],
+    [
+     520,
+     416,
+     1400,
+     1120
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     446,
+     1051,
+     901
+    ],
+    [
+     520,
+     293,
+     1280,
+     720
+    ]
+   ],
+   "types": [
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "banner",
+    "post",
+    "post",
+    "post"
+   ],
+   "brand": true
+  },
+  {
+   "slug": "websoft",
+   "title": "Websoft IT Development Solutions",
+   "kind": "Marketing Collateral",
+   "desc": "Promotional material for Websoft: the lion logo, course flyers, service posters, Independence Day greetings and an office notice.",
+   "tags": [
+    "Logo",
+    "Course flyers",
+    "Service posters",
+    "Greetings"
+   ],
+   "accent": "#2f6df6",
+   "notes": [
+    "Blue and white layouts with a strong header band keep every flyer on brand.",
+    "Course flyers group subjects into colour-coded blocks.",
+    "Seasonal greetings reuse the same footer of services and contact details."
+   ],
+   "cover": 3,
+   "items": [
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     650,
+     1400,
+     1750
+    ],
+    [
+     520,
+     693,
+     1086,
+     1448
+    ],
+    [
+     520,
+     693,
+     1086,
+     1448
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     736,
+     1054,
+     1492
+    ],
+    [
+     520,
+     520,
+     1254,
+     1254
+    ],
+    [
+     520,
+     651,
+     1279,
+     1600
+    ],
+    [
+     520,
+     364,
+     1400,
+     981
+    ]
+   ],
+   "types": [
+    "logo",
+    "flyer",
+    "flyer",
+    "post",
+    "post",
+    "flyer",
+    "flyer",
+    "flyer",
+    "flyer"
+   ],
+   "brand": true,
+   "trio": [
+    3,
+    1,
+    4
+   ]
+  },
+  {
+   "slug": "etisalat",
+   "title": "Etisalat Home Internet",
+   "kind": "Offer Post Series",
+   "desc": "Offer posts for home internet packages in the UAE. Several layout directions were explored around the same red, navy and gold palette, price focus and router imagery.",
+   "tags": [
+    "Offer posts",
+    "Layout variations",
+    "Retail promotion"
+   ],
+   "accent": "#e5263a",
+   "notes": [
+    "Price is the hero of each post, set large in red against white or navy.",
+    "Router photography anchors one corner so the offer text stays clear.",
+    "Several layout directions explore the same offer."
+   ],
+   "cover": 10,
+   "items": [
+    [
+     520,
+     736,
+     1273,
+     1800
+    ],
+    [
+     520,
+     650,
+     1080,
+     1350
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     436,
+     940,
+     788
+    ],
+    [
+     520,
+     436,
+     940,
+     788
+    ],
+    [
+     520,
+     436,
+     940,
+     788
+    ],
+    [
+     520,
+     436,
+     940,
+     788
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     650,
+     1080,
+     1350
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     736,
+     1273,
+     1800
+    ]
+   ],
+   "types": [
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post"
+   ],
+   "brand": true
+  },
+  {
+   "slug": "zm-brand",
+   "title": "Zaheer Malik (ZM)",
+   "kind": "Personal Brand & Stationery",
+   "desc": "My own identity: the ZM monogram, five business card directions, a resume layout and a profile banner, presented flat and on mockups.",
+   "tags": [
+    "Monogram",
+    "Business cards",
+    "Resume",
+    "Mockups"
+   ],
+   "accent": "#e2374d",
+   "notes": [
+    "A two-letter ZM monogram built from angular, split shapes.",
+    "Card options run from dark and bold to light and minimal, each with a QR code.",
+    "Desk and stationery mockups show how the cards read in print."
+   ],
+   "cover": 7,
+   "items": [
+    [
+     520,
+     297,
+     1050,
+     600
+    ],
+    [
+     520,
+     298,
+     1056,
+     606
+    ],
+    [
+     520,
+     297,
+     1054,
+     602
+    ],
+    [
+     520,
+     297,
+     1050,
+     600
+    ],
+    [
+     520,
+     298,
+     1050,
+     602
+    ],
+    [
+     520,
+     297,
+     1050,
+     600
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     390,
+     1334,
+     1000
+    ],
+    [
+     520,
+     390,
+     1334,
+     1000
+    ],
+    [
+     520,
+     390,
+     1334,
+     1000
+    ],
+    [
+     520,
+     390,
+     1400,
+     1050
+    ],
+    [
+     520,
+     736,
+     595,
+     842
+    ],
+    [
+     520,
+     297,
+     1400,
+     800
+    ]
+   ],
+   "types": [
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "stationery",
+    "banner"
+   ],
+   "brand": true,
+   "trio": [
+    7,
+    1,
+    13
+   ]
+  },
+  {
+   "slug": "top-shop",
+   "title": "Top Shop Tailors & Designers",
+   "kind": "Social Media Posts",
+   "desc": "Post series for a menswear tailoring shop, exploring navy, gold, green and maroon colourways around fabric photography and classic serif type.",
+   "tags": [
+    "Social posts",
+    "Colourway exploration",
+    "Local business"
+   ],
+   "accent": "#c9a227",
+   "notes": [
+    "Warm fabric photography is framed by gold and navy panels for a tailored, formal feel.",
+    "A serif shop name with a small crest keeps every post recognisable.",
+    "Several colourways let the feed rotate without repeating."
+   ],
+   "cover": 4,
+   "items": [
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     436,
+     940,
+     788
+    ],
+    [
+     520,
+     436,
+     940,
+     788
+    ],
+    [
+     520,
+     436,
+     940,
+     788
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     436,
+     940,
+     788
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ]
+   ],
+   "types": [
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post"
+   ],
+   "brand": true
+  },
+  {
+   "slug": "logo-collection",
+   "title": "Logo Collection",
+   "kind": "Marks for Businesses & Products",
+   "desc": "A selection of logos and wordmarks: Jameel Developers, Puri Fabrics, Nadeem Cloth House, BritLaw Solicitors, English Coach AI and others.",
+   "tags": [
+    "Logo design",
+    "Wordmarks",
+    "Emblems"
+   ],
+   "accent": "#5ae3f1",
+   "notes": [
+    "Each mark is built to work in a single colour first, then in full colour.",
+    "Wordmarks pair a symbol with clear, well-spaced type for small sizes.",
+    "Shown on light and dark backgrounds where both versions exist."
+   ],
+   "cover": 1,
+   "items": [
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     284,
+     1400,
+     764
+    ],
+    [
+     520,
+     284,
+     1400,
+     764
+    ],
+    [
+     520,
+     284,
+     1400,
+     764
+    ],
+    [
+     520,
+     596,
+     1400,
+     1606
+    ],
+    [
+     520,
+     322,
+     1400,
+     867
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     256,
+     256,
+     256,
+     256
+    ],
+    [
+     520,
+     520,
+     1024,
+     1024
+    ]
+   ],
+   "types": [
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo"
+   ],
+   "brand": false
+  },
+  {
+   "slug": "tourist-visa",
+   "title": "Tourist Visa Services",
+   "kind": "Logo Exploration",
+   "desc": "Seven logo directions for a travel and visa consultancy, built around aircraft, flight paths and location pins.",
+   "tags": [
+    "Logo concepts",
+    "Travel brand"
+   ],
+   "accent": "#1da1f2",
+   "notes": [
+    "Aircraft and flight-path shapes signal travel at a glance.",
+    "Italic, forward-leaning type adds a sense of motion.",
+    "Blue-led palettes are simple to reproduce on signage and print."
+   ],
+   "cover": 1,
+   "items": [
+    [
+     520,
+     320,
+     1400,
+     862
+    ],
+    [
+     520,
+     589,
+     1400,
+     1585
+    ],
+    [
+     520,
+     251,
+     918,
+     443
+    ],
+    [
+     520,
+     255,
+     1400,
+     686
+    ],
+    [
+     520,
+     249,
+     1400,
+     670
+    ],
+    [
+     520,
+     276,
+     1400,
+     742
+    ],
+    [
+     520,
+     191,
+     1400,
+     515
+    ]
+   ],
+   "types": [
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo",
+    "logo"
+   ],
+   "brand": true
+  },
+  {
+   "slug": "flyers",
+   "title": "Flyers, Posts & Labels",
+   "kind": "Mixed Promotional Design",
+   "desc": "Promotional pieces for several clients: hospital and agency flyers on mockups, study-visa and recruitment posts, college admission creatives, a supplement label and app promo flyers.",
+   "tags": [
+    "Flyers",
+    "Posters",
+    "Label",
+    "Mockups"
+   ],
+   "accent": "#22c55e",
+   "notes": [
+    "A clear top-to-bottom hierarchy: headline, key offer, details, contact.",
+    "Photo panels and angled shapes guide the eye toward the call to action.",
+    "Mockups show how each piece looks printed or posted."
+   ],
+   "cover": 5,
+   "items": [
+    [
+     520,
+     734,
+     1275,
+     1800
+    ],
+    [
+     520,
+     735,
+     1274,
+     1800
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     347,
+     1400,
+     933
+    ],
+    [
+     520,
+     292,
+     1400,
+     787
+    ],
+    [
+     520,
+     347,
+     1400,
+     933
+    ],
+    [
+     520,
+     364,
+     1400,
+     980
+    ],
+    [
+     520,
+     390,
+     1400,
+     1050
+    ],
+    [
+     520,
+     347,
+     1400,
+     933
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     229,
+     1280,
+     563
+    ],
+    [
+     520,
+     627,
+     1061,
+     1280
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     650,
+     1080,
+     1350
+    ],
+    [
+     520,
+     520,
+     736,
+     736
+    ],
+    [
+     520,
+     780,
+     1024,
+     1536
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     520,
+     813,
+     1003,
+     1568
+    ],
+    [
+     520,
+     650,
+     1122,
+     1402
+    ],
+    [
+     507,
+     900,
+     941,
+     1672
+    ]
+   ],
+   "types": [
+    "flyer",
+    "flyer",
+    "post",
+    "flyer",
+    "flyer",
+    "flyer",
+    "flyer",
+    "flyer",
+    "flyer",
+    "post",
+    "packaging",
+    "packaging",
+    "post",
+    "post",
+    "post",
+    "flyer",
+    "post",
+    "flyer",
+    "flyer",
+    "flyer",
+    "flyer"
+   ],
+   "brand": false
+  },
+  {
+   "slug": "realestate",
+   "title": "Real Estate Ads",
+   "kind": "Social Post Series",
+   "desc": "Property-sale post concepts in several styles, from dark luxury to bright red-and-white layouts, with two shown as Instagram mockups.",
+   "tags": [
+    "Social posts",
+    "Concept series",
+    "Instagram mockups"
+   ],
+   "accent": "#ef4444",
+   "notes": [
+    "Price and headline sit in the largest type, so the offer reads in a second.",
+    "Circular and angled photo frames show exterior and interior together.",
+    "The same content is laid out in several styles to compare directions."
+   ],
+   "cover": 2,
+   "items": [
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     437,
+     1400,
+     1177
+    ],
+    [
+     520,
+     437,
+     1400,
+     1177
+    ]
+   ],
+   "types": [
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post",
+    "post"
+   ],
+   "brand": false
+  },
+  {
+   "slug": "diapers-mall",
+   "title": "Diapers Mall & BabyCare Corner",
+   "kind": "Mascot Logo & Shop Branding",
+   "desc": "Baby-store branding: mascot logos, visiting cards and a promotional post in soft pastel colours.",
+   "tags": [
+    "Mascot logo",
+    "Visiting cards",
+    "Social post"
+   ],
+   "accent": "#38bdf8",
+   "notes": [
+    "Friendly mascots in soft blues and pinks suit a baby-care audience.",
+    "Rounded, playful lettering matches the characters.",
+    "Cards and posts reuse the mascot, so the shop is recognisable everywhere."
+   ],
+   "cover": 2,
+   "items": [
+    [
+     520,
+     547,
+     1400,
+     1472
+    ],
+    [
+     520,
+     466,
+     1400,
+     1255
+    ],
+    [
+     520,
+     293,
+     1400,
+     789
+    ],
+    [
+     520,
+     347,
+     1400,
+     933
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     443,
+     360,
+     443,
+     360
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ]
+   ],
+   "types": [
+    "logo",
+    "logo",
+    "stationery",
+    "stationery",
+    "post",
+    "logo",
+    "logo"
+   ],
+   "brand": true,
+   "trio": [
+    1,
+    3,
+    5
+   ]
+  },
+  {
+   "slug": "electric",
+   "title": "Malik Electric Store & Salman Electrician",
+   "kind": "Flyers & Shop Banners",
+   "desc": "Bilingual Urdu and English flyers and wide shop banners for electrical services, using a high-contrast yellow and blue scheme.",
+   "tags": [
+    "Flyers",
+    "Shop banners",
+    "Urdu & English"
+   ],
+   "accent": "#facc15",
+   "notes": [
+    "Yellow and blue give strong contrast for outdoor and print visibility.",
+    "Urdu and English are balanced so both audiences can read the services.",
+    "Phone numbers are set large in the footer of every piece."
+   ],
+   "cover": 4,
+   "items": [
+    [
+     520,
+     736,
+     1054,
+     1492
+    ],
+    [
+     520,
+     736,
+     1054,
+     1492
+    ],
+    [
+     520,
+     297,
+     1400,
+     800
+    ],
+    [
+     520,
+     297,
+     1400,
+     800
+    ],
+    [
+     520,
+     312,
+     1400,
+     841
+    ],
+    [
+     520,
+     297,
+     1400,
+     800
+    ]
+   ],
+   "types": [
+    "flyer",
+    "flyer",
+    "banner",
+    "banner",
+    "banner",
+    "banner"
+   ],
+   "brand": true
+  },
+  {
+   "slug": "channel-art",
+   "title": "Channel Art & Stream Banners",
+   "kind": "YouTube & Streaming Graphics",
+   "desc": "Banners and channel marks for video channels: Tekken 8 live-stream covers, Babu Baby Shorts, Learn English and ICT Navigator.",
+   "tags": [
+    "YouTube banners",
+    "Stream covers",
+    "Channel logos"
+   ],
+   "accent": "#f43f5e",
+   "notes": [
+    "Banners keep the key content in the centre area that shows on every screen size.",
+    "High-contrast titles stay readable over busy backgrounds.",
+    "Each channel has its own palette and type style."
+   ],
+   "cover": 1,
+   "items": [
+    [
+     520,
+     293,
+     1400,
+     788
+    ],
+    [
+     520,
+     293,
+     1400,
+     788
+    ],
+    [
+     520,
+     290,
+     1400,
+     781
+    ],
+    [
+     520,
+     290,
+     1400,
+     781
+    ],
+    [
+     520,
+     290,
+     1400,
+     781
+    ],
+    [
+     520,
+     208,
+     1400,
+     560
+    ],
+    [
+     520,
+     208,
+     1400,
+     560
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     800,
+     800
+    ],
+    [
+     520,
+     520,
+     800,
+     800
+    ],
+    [
+     520,
+     240,
+     1400,
+     646
+    ],
+    [
+     520,
+     292,
+     1400,
+     787
+    ],
+    [
+     520,
+     161,
+     1280,
+     397
+    ]
+   ],
+   "types": [
+    "banner",
+    "banner",
+    "banner",
+    "banner",
+    "banner",
+    "banner",
+    "banner",
+    "logo",
+    "logo",
+    "logo",
+    "banner",
+    "banner",
+    "banner"
+   ],
+   "brand": false
+  },
+  {
+   "slug": "alien-rage",
+   "title": "Alien Rage",
+   "kind": "Game Menu UI",
+   "desc": "Title screen and menu interface study for a sci-fi shooter: main menu, difficulty, options, controls, video and audio screens.",
+   "tags": [
+    "Game UI",
+    "Menu screens",
+    "Interface layout"
+   ],
+   "accent": "#4f8cff",
+   "notes": [
+    "A cold blue palette and thin uppercase type set a sci-fi tone.",
+    "Menu items sit left with generous spacing for controller navigation.",
+    "Every screen keeps the same footer of button hints."
+   ],
+   "cover": 1,
+   "items": [
+    [
+     520,
+     293,
+     1280,
+     720
+    ],
+    [
+     520,
+     293,
+     1280,
+     720
+    ],
+    [
+     520,
+     292,
+     1400,
+     787
+    ],
+    [
+     520,
+     293,
+     1400,
+     788
+    ],
+    [
+     520,
+     293,
+     1400,
+     788
+    ],
+    [
+     520,
+     293,
+     1400,
+     788
+    ],
+    [
+     520,
+     293,
+     1400,
+     788
+    ],
+    [
+     520,
+     293,
+     1400,
+     788
+    ],
+    [
+     520,
+     293,
+     1400,
+     788
+    ]
+   ],
+   "types": [
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui"
+   ],
+   "brand": true
+  },
+  {
+   "slug": "ceramics",
+   "title": "Barça & Hi-Class Ceramics",
+   "kind": "Carton Packaging",
+   "desc": "Shipping-carton artwork for two ceramics brands, including the printed result.",
+   "tags": [
+    "Carton artwork",
+    "Print production"
+   ],
+   "accent": "#c2742f",
+   "notes": [
+    "Carton artwork is kept to one or two colours for economical printing.",
+    "Product details and handling notes sit on the side panels.",
+    "The printed boxes are shown beside the artwork."
+   ],
+   "cover": 2,
+   "items": [
+    [
+     520,
+     316,
+     1400,
+     850
+    ],
+    [
+     520,
+     292,
+     1400,
+     787
+    ],
+    [
+     520,
+     390,
+     1400,
+     1050
+    ]
+   ],
+   "types": [
+    "packaging",
+    "packaging",
+    "packaging"
+   ],
+   "brand": true
+  },
+  {
+   "slug": "vector",
+   "title": "Vector Illustration",
+   "kind": "Illustrator Artwork",
+   "desc": "Illustrator pieces: character scene, typographic coffee cup, pen-tool cupcake study and a layered landscape.",
+   "tags": [
+    "Vector art",
+    "Typography",
+    "Pen tool"
+   ],
+   "accent": "#f59e0b",
+   "notes": [
+    "Built from simple shapes with the pen tool and layered flat colour.",
+    "Limited palettes keep each piece clean.",
+    "Lettering is treated as part of the illustration."
+   ],
+   "cover": 2,
+   "items": [
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     520,
+     1080,
+     1080
+    ],
+    [
+     520,
+     324,
+     1400,
+     874
+    ],
+    [
+     520,
+     390,
+     1400,
+     1050
+    ]
+   ],
+   "types": [
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration"
+   ],
+   "brand": false
+  },
+  {
+   "slug": "weather-247",
+   "title": "Weather-247",
+   "kind": "Web App Interface",
+   "desc": "Interface screens for Weather-247, a weather dashboard built as a final-year project: the landing screen, the live dashboard and the alerts view.",
+   "tags": [
+    "Web app UI",
+    "Dashboard",
+    "Mobile layout"
+   ],
+   "accent": "#4f7cff",
+   "notes": [
+    "Cards group temperature, wind, humidity and air quality so each reading has its own place.",
+    "Soft gradients and rounded panels keep a data-heavy screen calm.",
+    "The landing screen is laid out for phones first."
+   ],
+   "cover": 1,
+   "items": [
+    [
+     520,
+     433,
+     831,
+     692
+    ],
+    [
+     520,
+     542,
+     812,
+     846
+    ],
+    [
+     500,
+     816,
+     500,
+     816
+    ]
+   ],
+   "types": [
+    "ui",
+    "ui",
+    "ui"
+   ],
+   "brand": true
+  }
+ ],
+ "types": [
+  {
+   "key": "post",
+   "page": "posts",
+   "name": "Social Media Posts",
+   "one": "post",
+   "many": "posts",
+   "desc": "Square and portrait posts made for feeds, stories and ads.",
+   "short": "Posts"
+  },
+  {
+   "key": "logo",
+   "page": "logos",
+   "name": "Logos & Brand Marks",
+   "one": "logo",
+   "many": "logos",
+   "desc": "Logos, monograms, emblems and app icons.",
+   "short": "Logos"
+  },
+  {
+   "key": "flyer",
+   "page": "brochures",
+   "name": "Brochures & Flyers",
+   "one": "flyer",
+   "many": "brochures and flyers",
+   "desc": "Flyers, posters and promo sheets for print and sharing.",
+   "short": "Brochures"
+  },
+  {
+   "key": "ui",
+   "page": "ui",
+   "name": "UI Design",
+   "one": "screen",
+   "many": "screens",
+   "desc": "App, web and game interface screens.",
+   "short": "UI"
+  },
+  {
+   "key": "packaging",
+   "page": "packaging",
+   "name": "Packaging & Labels",
+   "one": "piece",
+   "many": "packaging pieces",
+   "desc": "Labels, bags and cartons, flat and on mockups.",
+   "short": "Packaging"
+  },
+  {
+   "key": "stationery",
+   "page": "stationery",
+   "name": "Business Cards & Stationery",
+   "one": "piece",
+   "many": "stationery pieces",
+   "desc": "Business cards, letterheads, forms and resumes.",
+   "short": "Stationery"
+  },
+  {
+   "key": "banner",
+   "page": "banners",
+   "name": "Banners & Covers",
+   "one": "banner",
+   "many": "banners",
+   "desc": "Wide banners, channel art and article covers.",
+   "short": "Banners"
+  },
+  {
+   "key": "illustration",
+   "page": "illustration",
+   "name": "Illustration",
+   "one": "piece",
+   "many": "illustrations",
+   "desc": "Vector artwork drawn in Illustrator.",
+   "short": "Illustration"
+  }
+ ],
+ "complete_brands": [
+  "jaguar-vpn",
+  "ithub-grw",
+  "zestiq-mina",
+  "arwaan-rice",
+  "stacklabx",
+  "websoft",
+  "diapers-mall",
+  "zm-brand"
+ ]
+}

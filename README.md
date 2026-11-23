@@ -51,10 +51,21 @@ Your uploaded resume is included at `assets/zaheer-babar-resume.pdf`. The file i
 
 ## Design portfolio
 
-`designs.html` shows design work as projects, like a Behance profile: a grid of project covers, a full-screen project viewer, and a zoom view.
+The design portfolio is its own small site inside this repo, with its own look and no dependency on the main page's CSS or JS.
 
-- Page styles and behaviour: `assets/designs.css` and `assets/designs.js` (loaded only on that page).
-- Project list: the JSON block with `id="designData"` near the end of `designs.html`. Each project has a slug `s`, category `c`, title `t`, type `k`, description `d`, tags `g`, cover number `v` and image sizes `i`.
-- Images: `assets/designs/<slug>/01.webp` (full size, up to 1400 px) and `01t.webp` (thumbnail, up to 520 px wide), numbered in order.
+It is organised two ways:
 
-To add a design to a project, add the next numbered pair of WebP files to its folder and append `[thumbWidth, thumbHeight, fullWidth, fullHeight]` to that project's `i` list.
+- **By type of work.** Every design has a type: post, logo, flyer (brochures and flyers), ui, packaging, stationery, banner or illustration. `designs.html` has one section per type, and each type has its own page (`designs/posts.html`, `logos.html`, `brochures.html`, `ui.html`, `packaging.html`, `stationery.html`, `banners.html`, `illustration.html`) listing everything of that type, grouped by brand.
+- **By brand.** Every brand or collection has its own page (`designs/<slug>.html`). A brand with several kinds of work is split into sections there: logos, stationery, packaging, posts, brochures, banners, UI.
+
+Files:
+
+- Styles and behaviour: `assets/design.css` and `assets/design.js`.
+- Images: `assets/designs/<slug>/01.webp` (full size) and `01t.webp` (thumbnail), numbered in order.
+- Data: `tools/design-projects.json`. Each project has `items` (image sizes) and a matching `types` list, one type per design, in the same order.
+
+All pages are generated. To change text, order, a design's type, or which brands appear under "Complete brand work", edit `tools/design-projects.json`, then run:
+
+    python tools/build_design_pages.py
+
+Add `--images` (needs Pillow) to also rebuild the moving-strip tiles and the share-preview images. Do not edit the generated HTML by hand; the next build would overwrite it.
