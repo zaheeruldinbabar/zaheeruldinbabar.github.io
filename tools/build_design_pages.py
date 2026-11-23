@@ -288,7 +288,7 @@ def marquee(root, tiles):
                 p = BY_SLUG[slug]
                 key = f"{slug}-{n:02d}"
                 if key in tiles:
-                    src, w, h = f"{root}assets/designs/_mq/{key}.webp", tiles[key][0], tiles[key][1]
+                    src, w, h = f"{root}assets/designs/strip/{key}.webp", tiles[key][0], tiles[key][1]
                 else:
                     src, (w, h) = thumb(root, slug, n), dims(p, n)[:2]
                 hidden = ' aria-hidden="true" tabindex="-1"' if dup else f' aria-label="{e(p["title"])}"'
@@ -563,7 +563,7 @@ def write(rel, text):
 def build_images():
     """Marquee tiles (small, fixed height) and 1200x630 share images. Needs Pillow."""
     from PIL import Image, ImageOps
-    mq_dir = os.path.join(REPO, "assets", "designs", "_mq")
+    mq_dir = os.path.join(REPO, "assets", "designs", "strip")
     os.makedirs(mq_dir, exist_ok=True)
     tiles = {}
     for row in DATA["marquee"]:
