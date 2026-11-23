@@ -22,7 +22,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
-VER = "2026.18"
+VER = "2026.21"
 DATA = json.load(open(os.path.join(HERE, "design-projects.json"), encoding="utf-8"))
 SITE = DATA["site"]
 PROJECTS = DATA["projects"]
@@ -34,18 +34,65 @@ BRAND_ORDER = ["logo", "stationery", "packaging", "post", "flyer", "banner", "ui
 TOTAL = sum(len(p["items"]) for p in PROJECTS)
 WA = "https://wa.me/923263400018?text=" + "Hello%20Zaheer%2C%20I%20saw%20your%20design%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
 MAIL = "mailto:zaheeruldin978@gmail.com?subject=Design%20project%20inquiry"
-FONTS = ("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1"
-         "&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap")
+_variants_path = os.path.join(HERE, "image-variants.json")
+VARIANTS = json.load(open(_variants_path, encoding="utf-8")) if os.path.isfile(_variants_path) else {}
 e = html.escape
 
 
 # ---------- small helpers ----------
+def _lum(rgb):
+    def ch(v):
+        v /= 255
+        return v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4
+    r, g, b = (ch(v) for v in rgb)
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+
+
+def ink(accent, bg=(20, 25, 37), need=4.8):
+    """The accent colour, lightened just enough to be readable as small text on the dark background."""
+    rgb = [int(accent[i:i + 2], 16) for i in (1, 3, 5)]
+    for step in range(0, 101, 4):
+        mixed = [round(v + (255 - v) * step / 100) for v in rgb]
+        hi, lo = sorted((_lum(mixed), _lum(bg)), reverse=True)
+        if (hi + 0.05) / (lo + 0.05) >= need:
+            return "#%02x%02x%02x" % tuple(mixed)
+    return "#ffffff"
+
+
 def thumb(root, slug, n):
     return f"{root}assets/designs/{slug}/{n:02d}t.webp"
 
 
 def full(root, slug, n):
     return f"{root}assets/designs/{slug}/{n:02d}.webp"
+
+
+def small(root, slug, n):
+    return f"{root}assets/designs/{slug}/{n:02d}s.webp"
+
+
+def mid(root, slug, n):
+    return f"{root}assets/designs/{slug}/{n:02d}m.webp"
+
+
+def srcset(p, n, root, upto="full"):
+    """All the sizes that exist for one design, smallest first, so the browser picks the lightest that fits.
+    upto: 'thumb' (small + thumb), 'mid' (adds the 900px cover size) or 'full'."""
+    slug = p["slug"]
+    v = VARIANTS.get(slug, {})
+    tw, _, fw, _ = dims(p, n)
+    out = []
+    sw = (v.get("s") or [])[n - 1] if len(v.get("s") or []) >= n else 0
+    if sw:
+        out.append(f"{small(root, slug, n)} {sw}w")
+    out.append(f"{thumb(root, slug, n)} {tw}w")
+    mw = (v.get("m") or {}).get(str(n), 0)
+    if upto in ("mid", "full") and mw:
+        out.append(f"{mid(root, slug, n)} {mw}w")
+    if upto == "full" or (upto == "mid" and not mw):
+        if fw > tw:
+            out.append(f"{full(root, slug, n)} {fw}w")
+    return ", ".join(out)
 
 
 def dims(p, n):
@@ -88,7 +135,7 @@ def trio_for(p):
 
 # ---------- page frame ----------
 def head(title, desc, path, og, root, accent=None, html_attrs=""):
-    style = f' style="--accent:{accent}"' if accent else ""
+    style = f' style="--accent:{accent};--ink:{ink(accent)}"' if accent else ""
     return f'''<!doctype html>
 <html lang="en"{html_attrs}>
 <head>
@@ -107,11 +154,9 @@ def head(title, desc, path, og, root, accent=None, html_attrs=""):
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="{FONTS}" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{FONTS}"></noscript>
-  <link rel="stylesheet" href="{root}assets/design.css?v={VER}">
+  <link rel="preload" as="font" type="font/woff2" href="{root}assets/fonts/plus-jakarta-sans.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="{root}assets/fonts/instrument-serif-italic.woff2" crossorigin>
+  <link rel="stylesheet" href="{root}assets/design.min.css?v={VER}">
   <link rel="icon" type="image/png" sizes="48x48" href="{root}assets/favicon-48.png">
   <link rel="apple-touch-icon" href="{root}assets/apple-touch-icon.png">
 </head>
@@ -199,12 +244,14 @@ def shot(p, i, root, cls="jg-item", eager=False):
     r = round(a / b, 4)
     t = TYPE[p["types"][i - 1]]
     cap = f'{p["title"]} · {t["name"]}'
-    desk, tab, mob = min(1320, round(r * 380)), min(860, round(r * 280)), min(360, round(r * 190))
     load = "" if eager else ' loading="lazy"'
-    # Sample strips are small, so the thumbnail alone is enough there.
-    responsive = "" if cls == "strip-item" else (
-        f' srcset="{thumb(root, p["slug"], i)} {a}w, {full(root, p["slug"], i)} {fw}w" '
-        f'sizes="(max-width: 620px) {mob}px, (max-width: 900px) {tab}px, {desk}px"')
+    if cls == "strip-item":
+        # Sample strips have a fixed height (300 / 240 / 190px), so the width follows the design's shape.
+        desk, tab, mob = round(r * 300), round(r * 240), min(355, round(r * 190))
+        responsive = f' srcset="{srcset(p, i, root, "thumb")}" sizes="(max-width: 620px) {mob}px, (max-width: 900px) {tab}px, {desk}px"'
+    else:
+        desk, tab, mob = min(1320, round(r * 380)), min(860, round(r * 280)), min(360, round(r * 190))
+        responsive = f' srcset="{srcset(p, i, root)}" sizes="(max-width: 620px) {mob}px, (max-width: 900px) {tab}px, {desk}px"'
     return (f'<a class="{cls}" href="{full(root, p["slug"], i)}" data-full="{full(root, p["slug"], i)}" data-w="{fw}" data-h="{fh}" '
             f'data-cap="{e(cap)}" style="--r:{r}" aria-label="Open full size: {e(cap)}">'
             f'<img src="{thumb(root, p["slug"], i)}"{responsive} width="{a}" height="{b}" '
@@ -229,16 +276,17 @@ def visual(p, root):
     a, b, c = trio_for(p)
     slug = p["slug"]
     tw, th, fw, fh = dims(p, a)
-    small = "".join(
-        f'<img src="{thumb(root, slug, i)}" width="{dims(p, i)[0]}" height="{dims(p, i)[1]}" alt="" loading="lazy" decoding="async">'
+    side = "".join(
+        f'<img src="{thumb(root, slug, i)}" srcset="{srcset(p, i, root, "thumb")}" sizes="(max-width: 900px) 32vw, 16vw" '
+        f'width="{dims(p, i)[0]}" height="{dims(p, i)[1]}" alt="" loading="lazy" decoding="async">'
         for i in (b, c))
-    return (f'<img src="{thumb(root, slug, a)}" srcset="{thumb(root, slug, a)} {tw}w, {full(root, slug, a)} {fw}w" '
-            f'sizes="(max-width: 900px) 58vw, 30vw" width="{tw}" height="{th}" alt="" loading="lazy" decoding="async">{small}')
+    return (f'<img src="{thumb(root, slug, a)}" srcset="{srcset(p, a, root, "mid")}" '
+            f'sizes="(max-width: 900px) 58vw, 30vw" width="{tw}" height="{th}" alt="" loading="lazy" decoding="async">{side}')
 
 
 def brand_card(p, root):
     n = len(p["items"])
-    return f'''        <a class="brand-card rv" href="{root}designs/{p["slug"]}.html" style="--accent:{p["accent"]}" aria-label="{e(p["title"])}: complete brand work, {n} designs">
+    return f'''        <a class="brand-card rv" href="{root}designs/{p["slug"]}.html" style="--accent:{p["accent"]};--ink:{ink(p["accent"])}" aria-label="{e(p["title"])}: complete brand work, {n} designs">
           <span class="feat-visual">{visual(p, root)}</span>
           <span class="brand-body">
             <span class="brand-top"><span class="brand-title">{e(p["title"])}</span><span class="brand-go" aria-hidden="true">&nearr;</span></span>
@@ -254,9 +302,9 @@ def card(p, root, span=4):
     sizes = {4: "31vw", 5: "39vw", 7: "56vw"}[span]
     n = len(p["items"])
     kinds = " · ".join(TYPE[k]["short"] for k in types_in(p, BRAND_ORDER)[:3])
-    return f'''        <a class="card rv" href="{root}designs/{p["slug"]}.html" data-types="{" ".join(types_in(p))}" data-span="{span}" style="--accent:{p["accent"]}">
+    return f'''        <a class="card rv" href="{root}designs/{p["slug"]}.html" data-types="{" ".join(types_in(p))}" data-span="{span}" style="--accent:{p["accent"]};--ink:{ink(p["accent"])}">
           <span class="card-media">
-            <img src="{thumb(root, p["slug"], c)}" srcset="{thumb(root, p["slug"], c)} {tw}w, {full(root, p["slug"], c)} {fw}w" sizes="(max-width: 620px) 46vw, (max-width: 900px) 46vw, {sizes}" width="{tw}" height="{th}" alt="" loading="lazy" decoding="async">
+            <img src="{thumb(root, p["slug"], c)}" srcset="{srcset(p, c, root, "mid")}" sizes="(max-width: 900px) 46vw, {sizes}" width="{tw}" height="{th}" alt="" loading="lazy" decoding="async">
             <span class="card-count">{n} design{"s" if n != 1 else ""}</span>
             <span class="card-go" aria-hidden="true">&nearr;</span>
           </span>
@@ -311,8 +359,9 @@ def hero_art(root):
         p = BY_SLUG[slug]
         tw, th = dims(p, n)[:2]
         prio = ' fetchpriority="high"' if k <= 2 else ""
-        cards.append(f'          <a class="art-card c{k}" href="{root}designs/{slug}.html" aria-label="{e(p["title"])}" style="--accent:{p["accent"]}">'
-                     f'<img src="{thumb(root, slug, n)}" width="{tw}" height="{th}" alt=""{prio} decoding="async"></a>')
+        cards.append(f'          <a class="art-card c{k}" href="{root}designs/{slug}.html" aria-label="{e(p["title"])}" style="--accent:{p["accent"]};--ink:{ink(p["accent"])}">'
+                     f'<img src="{thumb(root, slug, n)}" srcset="{srcset(p, n, root, "thumb")}" sizes="(max-width: 900px) 44vw, 262px" '
+                     f'width="{tw}" height="{th}" alt=""{prio} decoding="async"></a>')
     return "\n".join(cards)
 
 
@@ -455,7 +504,7 @@ def build_type(t):
         nums = of_type(p, key)
         multi = len(types_in(p)) > 1
         link = "See the full brand" if (p["brand"] and multi) else ("Open this brand" if p["brand"] else "Open this collection")
-        groups.append(f'''    <section class="group wrap" id="{p["slug"]}" style="--accent:{p["accent"]}">
+        groups.append(f'''    <section class="group wrap" id="{p["slug"]}" style="--accent:{p["accent"]};--ink:{ink(p["accent"])}">
       <div class="group-head rv">
         <div><p class="label no-rule">{count_label(len(nums), t)}</p><h2><a href="{p["slug"]}.html">{e(p["title"])}</a></h2></div>
         <a class="btn btn-ghost" href="{p["slug"]}.html">{link} <span class="arr">&nearr;</span></a>
@@ -523,8 +572,8 @@ def build_project(p, idx):
 
     def pn(q, cls, word):
         qc = q["cover"]
-        return (f'      <a class="pn-card {cls} rv" href="{q["slug"]}.html" style="--accent:{q["accent"]}">'
-                f'<img src="{thumb(root, q["slug"], qc)}" srcset="{thumb(root, q["slug"], qc)} {dims(q, qc)[0]}w, {full(root, q["slug"], qc)} {dims(q, qc)[2]}w" sizes="(max-width: 620px) 92vw, 46vw" width="{dims(q, qc)[0]}" height="{dims(q, qc)[1]}" alt="" loading="lazy" decoding="async">'
+        return (f'      <a class="pn-card {cls} rv" href="{q["slug"]}.html" style="--accent:{q["accent"]};--ink:{ink(q["accent"])}">'
+                f'<img src="{thumb(root, q["slug"], qc)}" srcset="{srcset(q, qc, root, "mid")}" sizes="(max-width: 620px) 92vw, 46vw" width="{dims(q, qc)[0]}" height="{dims(q, qc)[1]}" alt="" loading="lazy" decoding="async">'
                 f'<small>{word}</small><strong>{e(q["title"])}</strong></a>')
 
     title = f'{p["title"]}: {p["kind"]} | Zaheer Malik Design'
@@ -603,12 +652,43 @@ def build_images():
     for row in DATA["marquee"]:
         for slug, n in row:
             im = Image.open(os.path.join(REPO, "assets", "designs", slug, f"{n:02d}.webp")).convert("RGB")
-            h = 380
+            h = 300
             w = round(im.width * h / im.height)
             im = im.resize((w, h), Image.LANCZOS)
             key = f"{slug}-{n:02d}"
-            im.save(os.path.join(mq_dir, key + ".webp"), "WEBP", quality=66, method=6)
+            im.save(os.path.join(mq_dir, key + ".webp"), "WEBP", quality=64, method=6)
             tiles[key] = [w, h]
+    # Extra sizes so each screen downloads only what it needs:
+    #   NNs.webp  small (up to 400px tall) for strips and phone galleries
+    #   NNm.webp  medium (900px wide) for the cover of each brand or collection
+    variants = {}
+    for p in PROJECTS:
+        pdir = os.path.join(REPO, "assets", "designs", p["slug"])
+        s_widths, m_widths = [], {}
+        covers = {p["cover"], *trio_for(p)[:1]}
+        for n, (tw, th, fw, fh) in enumerate(p["items"], 1):
+            sw = 0
+            if th > 400:
+                im = Image.open(os.path.join(pdir, f"{n:02d}.webp")).convert("RGB")
+                im.thumbnail((520, 400), Image.LANCZOS)
+                im.save(os.path.join(pdir, f"{n:02d}s.webp"), "WEBP", quality=66, method=6)
+                sw = im.width
+            s_widths.append(sw)
+            if n in covers and fw > 1000:
+                im = Image.open(os.path.join(pdir, f"{n:02d}.webp")).convert("RGB")
+                im.thumbnail((900, 1300), Image.LANCZOS)
+                im.save(os.path.join(pdir, f"{n:02d}m.webp"), "WEBP", quality=72, method=6)
+                m_widths[str(n)] = im.width
+        variants[p["slug"]] = {"s": s_widths, "m": m_widths}
+    json.dump(variants, open(os.path.join(HERE, "image-variants.json"), "w", encoding="utf-8"), separators=(",", ":"))
+    VARIANTS.clear()
+    VARIANTS.update(variants)
+    # Smaller copies of the profile photo for the main page.
+    prof = Image.open(os.path.join(REPO, "assets", "profile.jpg")).convert("RGB")
+    for width in (360, 200):
+        im = prof.copy()
+        im.thumbnail((width, width * 2), Image.LANCZOS)
+        im.save(os.path.join(REPO, "assets", f"profile-{width}.webp"), "WEBP", quality=78, method=6)
     for p in PROJECTS:
         im = Image.open(os.path.join(REPO, "assets", "designs", p["slug"], f'{p["cover"]:02d}.webp')).convert("RGB")
         im = ImageOps.fit(im, (1200, 630), Image.LANCZOS, centering=(0.5, 0.12))
@@ -625,6 +705,8 @@ def main():
         tiles = json.load(open(tiles_path, encoding="utf-8"))
     else:
         tiles = {}
+    import minify_css
+    minify_css.main()
     type_pages = {t["page"] for t in TYPES}
     for p in PROJECTS:
         assert len(p["types"]) == len(p["items"]), f'{p["slug"]}: every design needs a type'

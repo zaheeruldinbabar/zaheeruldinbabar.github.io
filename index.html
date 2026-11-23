@@ -22,12 +22,9 @@
       }
     } catch (e) {}
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fonts load without blocking the first paint; text shows at once in a system font, then swaps. -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="assets/style.css?v=2026.13">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/dm-sans.woff2" crossorigin>
+  <link rel="stylesheet" href="assets/style.min.css?v=2026.20">
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
@@ -54,7 +51,7 @@
       <div class="welcome-photo-wrap">
         <div class="welcome-ring welcome-ring-outer"></div>
         <div class="welcome-ring welcome-ring-inner"></div>
-        <img src="assets/profile.webp" alt="" width="640" height="858" class="welcome-photo">
+        <img src="assets/profile-360.webp" srcset="assets/profile-200.webp 200w, assets/profile-360.webp 360w" sizes="112px" alt="" width="360" height="483" class="welcome-photo">
       </div>
 
       <!-- Full Name (decorative here; the page's real h1 is in the hero) -->
@@ -185,7 +182,7 @@
         <div class="orbit orbit-three"></div>
         <div class="portrait-container">
           <div class="portrait-frame" id="portraitFrame">
-            <img class="portrait" src="assets/profile.webp" width="640" height="858" alt="Muhammad Zaheer Ul Din Babar — Full-Stack Developer & Information Technology Professional" fetchpriority="high">
+            <img class="portrait" src="assets/profile.webp" srcset="assets/profile-360.webp 360w, assets/profile.webp 640w" sizes="(max-width: 720px) 72vw, 300px" width="640" height="858" alt="Muhammad Zaheer Ul Din Babar — Full-Stack Developer & Information Technology Professional" fetchpriority="high">
             <div class="portrait-shine"></div>
             <div class="portrait-border-glow"></div>
           </div>
@@ -1090,7 +1087,7 @@
             <span class="arch-step-num">STAGE 01</span>
             <span class="arch-step-tag">DISCOVERY &amp; UI/UX</span>
           </div>
-          <h4>System Design &amp; Prototyping</h4>
+          <h3>System Design &amp; Prototyping</h3>
           <p>Figma wireframes, database schema modeling, REST API contracts, and scalable design systems.</p>
         </div>
         <div class="arch-step spotlight-card">
@@ -1098,7 +1095,7 @@
             <span class="arch-step-num">STAGE 02</span>
             <span class="arch-step-tag">FULL-STACK CORE</span>
           </div>
-          <h4>Frontend &amp; Backend Engineering</h4>
+          <h3>Frontend &amp; Backend Engineering</h3>
           <p>Next.js, React, TypeScript, Node.js, Python/Django, and PHP/Laravel with clean modular code.</p>
         </div>
         <div class="arch-step spotlight-card">
@@ -1106,7 +1103,7 @@
             <span class="arch-step-num">STAGE 03</span>
             <span class="arch-step-tag">DATA &amp; AI PIPELINES</span>
           </div>
-          <h4>Persistence, Caching &amp; ML</h4>
+          <h3>Persistence, Caching &amp; ML</h3>
           <p>PostgreSQL, MySQL, Prisma ORM, Redis caching, Celery async queues, and Scikit-learn ML models.</p>
         </div>
         <div class="arch-step spotlight-card">
@@ -1114,7 +1111,7 @@
             <span class="arch-step-num">STAGE 04</span>
             <span class="arch-step-tag">CLOUD &amp; DEVOPS</span>
           </div>
-          <h4>Production Cloud Deployment</h4>
+          <h3>Production Cloud Deployment</h3>
           <p>AWS &amp; Alibaba Cloud infrastructure, Nginx/Gunicorn reverse proxies, SSL security, and monitoring.</p>
         </div>
       </div>

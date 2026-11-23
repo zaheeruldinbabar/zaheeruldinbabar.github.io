@@ -69,3 +69,10 @@ All pages are generated. To change text, order, a design's type, or which brands
     python tools/build_design_pages.py
 
 Add `--images` (needs Pillow) to also rebuild the moving-strip tiles and the share-preview images. Do not edit the generated HTML by hand; the next build would overwrite it.
+
+## Speed and accessibility
+
+- Fonts are served from `assets/fonts` (no request to Google Fonts).
+- Pages load the minified stylesheets `assets/style.min.css` and `assets/design.min.css`. Edit `style.css` or `design.css`, then run `python tools/minify_css.py` (the design build runs it for you).
+- Each design has up to four sizes: `NNs.webp` (small), `NNt.webp` (thumbnail), `NNm.webp` (covers only) and `NN.webp` (full). `python tools/build_design_pages.py --images` regenerates the small and cover sizes.
+- Brand accent colours used for small text are lightened automatically to keep them readable (the `--ink` value next to `--accent`).

@@ -56,7 +56,14 @@
     }, { threshold: 0.01, rootMargin: '0px 0px 120px 0px' });
     revealItems.forEach(function (node) { io.observe(node); });
     // Safety net: never leave content hidden if the observer does not fire.
-    setTimeout(function () { revealItems.forEach(function (node) { node.classList.add('in'); }); }, 3500);
+    setTimeout(function () {
+      revealItems.forEach(function (node) {
+        if (node.classList.contains('in')) return;
+        node.style.transition = 'none'; // no fade: these are off screen
+        node.classList.add('in');
+        io.unobserve(node);
+      });
+    }, 2500);
   } else {
     revealItems.forEach(function (node) { node.classList.add('in'); });
   }

@@ -1,3 +1,22 @@
+/* Fonts are served from this site (assets/fonts). */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('fonts/plus-jakarta-sans.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/instrument-serif-italic.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ==========================================================================
    ZAHEER MALIK — DESIGN PORTFOLIO
    Standalone styles for designs.html and every page in /designs/.
@@ -131,7 +150,7 @@ ol {
   font: 600 12px/1.4 var(--display);
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--ink, var(--accent));
 }
 
 .label::before {
@@ -189,7 +208,7 @@ ol {
 
 .btn-ghost:hover {
   border-color: var(--accent);
-  color: var(--accent);
+  color: var(--ink, var(--accent));
   transform: translateY(-2px);
 }
 
@@ -272,7 +291,7 @@ ol {
 
 .brand b i {
   font-style: normal;
-  color: var(--accent);
+  color: var(--ink, var(--accent));
 }
 
 .brand small {
@@ -399,7 +418,7 @@ ol {
 .about h2 em {
   font: italic 400 1.08em/1 var(--serif);
   letter-spacing: -0.01em;
-  color: var(--accent);
+  color: var(--ink, var(--accent));
 }
 
 .lead {
@@ -561,7 +580,7 @@ ol {
 }
 
 .art-chip b {
-  color: var(--accent);
+  color: var(--ink, var(--accent));
 }
 
 .art-chip i {
@@ -725,7 +744,7 @@ ol {
 
 .ticker i {
   margin-right: clamp(16px, 2vw, 30px);
-  color: var(--accent);
+  color: var(--ink, var(--accent));
   font-size: 0.42em;
   font-style: normal;
 }
@@ -819,7 +838,7 @@ ol {
 .feat-num {
   font: 600 14px var(--display);
   letter-spacing: 0.12em;
-  color: var(--accent);
+  color: var(--ink, var(--accent));
 }
 
 .feat-copy h3 {
@@ -941,7 +960,7 @@ ol {
 }
 
 .disc-row:hover .disc-name {
-  color: var(--accent);
+  color: var(--ink, var(--accent));
 }
 
 .disc-desc {
@@ -1199,7 +1218,7 @@ ol {
 }
 
 .steps b {
-  color: var(--accent);
+  color: var(--ink, var(--accent));
   font: 600 14px var(--display);
   letter-spacing: 0.12em;
 }
@@ -1350,7 +1369,7 @@ ol {
 }
 
 .meta dd a:hover {
-  color: var(--accent);
+  color: var(--ink, var(--accent));
   border-color: var(--accent);
 }
 
@@ -1425,7 +1444,7 @@ ol {
 
 .notes li::before {
   content: '0' counter(n);
-  color: var(--accent);
+  color: var(--ink, var(--accent));
   font: 600 13.5px/1.9 var(--display);
   letter-spacing: 0.1em;
 }
@@ -1565,7 +1584,7 @@ ol {
 }
 
 .pn-card small {
-  color: var(--accent);
+  color: var(--ink, var(--accent));
   font: 600 12.5px var(--display);
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1631,7 +1650,7 @@ ol {
 
 .lb-x:hover {
   border-color: var(--accent);
-  color: var(--accent);
+  color: var(--ink, var(--accent));
 }
 
 .lb-stage {
@@ -2176,7 +2195,7 @@ body.locked {
 
 .strip-more:hover {
   border-color: var(--accent);
-  color: var(--accent);
+  color: var(--ink, var(--accent));
 }
 
 /* ---------- Complete brand cards ---------- */
@@ -2269,7 +2288,7 @@ body.locked {
 
 .brand-types b {
   margin-left: 4px;
-  color: var(--accent);
+  color: var(--ink, var(--accent));
   font-weight: 600;
 }
 
@@ -2300,7 +2319,7 @@ body.locked {
 }
 
 .group-head h2 a:hover {
-  color: var(--accent);
+  color: var(--ink, var(--accent));
 }
 
 #gallery .gal-head {
