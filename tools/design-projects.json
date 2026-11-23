@@ -1219,6 +1219,30 @@
      689,
      1359,
      1800
+    ],
+    [
+     520,
+     82,
+     1400,
+     220
+    ],
+    [
+     520,
+     78,
+     1400,
+     211
+    ],
+    [
+     520,
+     347,
+     1400,
+     935
+    ],
+    [
+     378,
+     900,
+     755,
+     1800
     ]
    ],
    "types": [
@@ -1246,7 +1270,11 @@
     "banner",
     "post",
     "post",
-    "post"
+    "post",
+    "banner",
+    "banner",
+    "banner",
+    "banner"
    ],
    "brand": true,
    "trio": [
@@ -1465,11 +1493,32 @@
      149,
      1400,
      402
+    ],
+    [
+     520,
+     150,
+     1400,
+     403
+    ],
+    [
+     520,
+     150,
+     1400,
+     403
+    ],
+    [
+     520,
+     150,
+     1400,
+     403
     ]
    ],
    "types": [
     "logo",
     "logo",
+    "packaging",
+    "packaging",
+    "packaging",
     "packaging",
     "packaging",
     "packaging",
@@ -1511,10 +1560,11 @@
   {
    "slug": "stacklabx",
    "title": "StackLab X",
-   "kind": "Brand Marks, Workshop Flyers & Blog Covers",
-   "desc": "Visual work for StackLab X: the X emblem and app icons, flyers for student workshops, a platform poster and a cover-image series for technical blog articles.",
+   "kind": "Brand Marks, Website Design, Flyers & Blog Covers",
+   "desc": "Visual work for StackLab X: the X emblem and app icons, website page designs, flyers for student workshops, a platform poster and a cover-image series for technical blog articles.",
    "tags": [
     "Emblem & app icon",
+    "Website design",
     "Workshop flyers",
     "Blog cover series"
    ],
@@ -1651,6 +1701,36 @@
      296,
      1400,
      798
+    ],
+    [
+     520,
+     676,
+     1385,
+     1800
+    ],
+    [
+     520,
+     676,
+     1385,
+     1800
+    ],
+    [
+     520,
+     676,
+     1385,
+     1800
+    ],
+    [
+     520,
+     676,
+     1385,
+     1800
+    ],
+    [
+     520,
+     676,
+     1385,
+     1800
     ]
    ],
    "types": [
@@ -1674,7 +1754,12 @@
     "banner",
     "banner",
     "banner",
-    "banner"
+    "banner",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui"
    ],
    "brand": true,
    "trio": [
@@ -1862,6 +1947,30 @@
      364,
      1400,
      981
+    ],
+    [
+     520,
+     361,
+     1400,
+     971
+    ],
+    [
+     520,
+     293,
+     1400,
+     788
+    ],
+    [
+     520,
+     735,
+     1273,
+     1800
+    ],
+    [
+     520,
+     735,
+     1273,
+     1800
     ]
    ],
    "types": [
@@ -1873,7 +1982,11 @@
     "flyer",
     "flyer",
     "flyer",
-    "flyer"
+    "flyer",
+    "logo",
+    "logo",
+    "logo",
+    "stationery"
    ],
    "brand": true,
    "trio": [
@@ -2125,6 +2238,12 @@
      297,
      1400,
      800
+    ],
+    [
+     520,
+     306,
+     978,
+     576
     ]
    ],
    "types": [
@@ -2142,7 +2261,8 @@
     "stationery",
     "stationery",
     "stationery",
-    "banner"
+    "banner",
+    "stationery"
    ],
    "brand": true,
    "trio": [
@@ -2297,7 +2417,7 @@
    "slug": "logo-collection",
    "title": "Logo Collection",
    "kind": "Marks for Businesses & Products",
-   "desc": "A selection of logos and wordmarks: Jameel Developers, Puri Fabrics, Nadeem Cloth House, BritLaw Solicitors, English Coach AI and others.",
+   "desc": "A selection of logos and wordmarks: Jameel Developers, Puri Fabrics, Nadeem Cloth House, BritLaw Solicitors, Mouj Mastiyan, Worker Traders, Jiffy Stock and others.",
    "tags": [
     "Logo design",
     "Wordmarks",
@@ -2370,9 +2490,37 @@
      520,
      1024,
      1024
+    ],
+    [
+     520,
+     536,
+     1400,
+     1443
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     328,
+     1276,
+     805
+    ],
+    [
+     520,
+     287,
+     1400,
+     774
     ]
    ],
    "types": [
+    "logo",
+    "logo",
+    "logo",
+    "logo",
     "logo",
     "logo",
     "logo",
@@ -2601,6 +2749,24 @@
      900,
      941,
      1672
+    ],
+    [
+     520,
+     729,
+     1285,
+     1800
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
     ]
    ],
    "types": [
@@ -2624,19 +2790,22 @@
     "flyer",
     "flyer",
     "flyer",
-    "flyer"
+    "flyer",
+    "flyer",
+    "flyer",
+    "post"
    ],
    "brand": false
   },
   {
    "slug": "realestate",
    "title": "Real Estate Ads",
-   "kind": "Social Post Series",
-   "desc": "Property-sale post concepts in several styles, from dark luxury to bright red-and-white layouts, with two shown as Instagram mockups.",
+   "kind": "Social Posts & Business Card",
+   "desc": "Property-sale post concepts in several styles, from dark luxury to bright red-and-white layouts, plus a matching business card.",
    "tags": [
     "Social posts",
     "Concept series",
-    "Instagram mockups"
+    "Business card"
    ],
    "accent": "#ef4444",
    "notes": [
@@ -2705,6 +2874,30 @@
      437,
      1400,
      1177
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     383,
+     900,
+     766,
+     1800
+    ],
+    [
+     520,
+     312,
+     1080,
+     648
     ]
    ],
    "types": [
@@ -2717,7 +2910,11 @@
     "post",
     "post",
     "post",
-    "post"
+    "post",
+    "post",
+    "post",
+    "post",
+    "stationery"
    ],
    "brand": false
   },
@@ -2729,7 +2926,7 @@
    "tags": [
     "Mascot logo",
     "Visiting cards",
-    "Social post"
+    "Flyer & banner"
    ],
    "accent": "#38bdf8",
    "notes": [
@@ -2780,6 +2977,18 @@
      520,
      1400,
      1400
+    ],
+    [
+     520,
+     649,
+     1400,
+     1748
+    ],
+    [
+     520,
+     196,
+     1400,
+     528
     ]
    ],
    "types": [
@@ -2789,7 +2998,9 @@
     "stationery",
     "post",
     "logo",
-    "logo"
+    "logo",
+    "flyer",
+    "banner"
    ],
    "brand": true,
    "trio": [
@@ -2801,12 +3012,12 @@
   {
    "slug": "electric",
    "title": "Malik Electric Store & Salman Electrician",
-   "kind": "Flyers & Shop Banners",
-   "desc": "Bilingual Urdu and English flyers and wide shop banners for electrical services, using a high-contrast yellow and blue scheme.",
+   "kind": "Flyers, Shop Banners & Visiting Cards",
+   "desc": "Bilingual Urdu and English flyers, wide shop banners and visiting cards for electrical services, using a high-contrast yellow and blue scheme.",
    "tags": [
     "Flyers",
     "Shop banners",
-    "Urdu & English"
+    "Visiting cards"
    ],
    "accent": "#facc15",
    "notes": [
@@ -2851,6 +3062,18 @@
      297,
      1400,
      800
+    ],
+    [
+     520,
+     302,
+     893,
+     519
+    ],
+    [
+     520,
+     294,
+     919,
+     520
     ]
    ],
    "types": [
@@ -2859,7 +3082,9 @@
     "banner",
     "banner",
     "banner",
-    "banner"
+    "banner",
+    "stationery",
+    "stationery"
    ],
    "brand": true
   },
@@ -3108,13 +3333,14 @@
   },
   {
    "slug": "vector",
-   "title": "Vector Illustration",
+   "title": "Vector Illustration & Lettering",
    "kind": "Illustrator Artwork",
-   "desc": "Illustrator pieces: character scene, typographic coffee cup, pen-tool cupcake study and a layered landscape.",
+   "desc": "Illustrator pieces drawn with the pen tool: a boat scene, characters and animals, a building, lettering and graphic-style studies, and repeat patterns.",
    "tags": [
     "Vector art",
-    "Typography",
-    "Pen tool"
+    "Pen tool",
+    "Lettering",
+    "Patterns"
    ],
    "accent": "#f59e0b",
    "notes": [
@@ -3147,9 +3373,114 @@
      390,
      1400,
      1050
+    ],
+    [
+     520,
+     525,
+     1400,
+     1414
+    ],
+    [
+     520,
+     605,
+     1400,
+     1628
+    ],
+    [
+     520,
+     649,
+     1400,
+     1747
+    ],
+    [
+     520,
+     558,
+     1400,
+     1503
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     754,
+     1242,
+     1800
+    ],
+    [
+     520,
+     750,
+     1249,
+     1800
+    ],
+    [
+     520,
+     554,
+     1400,
+     1492
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     752,
+     1245,
+     1800
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
+    ],
+    [
+     520,
+     520,
+     1400,
+     1400
     ]
    ],
    "types": [
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
+    "illustration",
     "illustration",
     "illustration",
     "illustration",
@@ -3161,10 +3492,10 @@
    "slug": "weather-247",
    "title": "Weather-247",
    "kind": "Web App Interface",
-   "desc": "Interface screens for Weather-247, a weather dashboard built as a final-year project: the landing screen, the live dashboard and the alerts view.",
+   "desc": "Interface screens for Weather-247, a weather dashboard built as a final-year project: landing page, live dashboard, forecast charts, city comparison, route planning, alerts and settings.",
    "tags": [
     "Web app UI",
-    "Dashboard",
+    "Dashboard & charts",
     "Mobile layout"
    ],
    "accent": "#4f7cff",
@@ -3192,14 +3523,99 @@
      816,
      500,
      816
+    ],
+    [
+     520,
+     673,
+     1391,
+     1800
+    ],
+    [
+     520,
+     673,
+     1391,
+     1800
+    ],
+    [
+     520,
+     673,
+     1391,
+     1800
+    ],
+    [
+     520,
+     673,
+     1391,
+     1800
+    ],
+    [
+     520,
+     673,
+     1391,
+     1800
     ]
    ],
    "types": [
     "ui",
     "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
+    "ui",
     "ui"
    ],
    "brand": true
+  },
+  {
+   "slug": "gig-covers",
+   "title": "Freelance Gig Covers",
+   "kind": "Service Banners",
+   "desc": "Cover banners made to advertise freelance design services: flyer design and Amazon storefront design, each in a few colour directions.",
+   "tags": [
+    "Service banners",
+    "Colour variations"
+   ],
+   "accent": "#f59e0b",
+   "notes": [
+    "The service name is the largest element, so it reads at thumbnail size.",
+    "A short checklist of benefits sits under the headline.",
+    "Each banner was made in several colourways to test which stands out."
+   ],
+   "brand": false,
+   "cover": 1,
+   "items": [
+    [
+     520,
+     312,
+     1400,
+     841
+    ],
+    [
+     520,
+     312,
+     1400,
+     841
+    ],
+    [
+     520,
+     312,
+     1400,
+     841
+    ],
+    [
+     520,
+     312,
+     1400,
+     841
+    ]
+   ],
+   "types": [
+    "banner",
+    "banner",
+    "banner",
+    "banner"
+   ]
   }
  ],
  "types": [

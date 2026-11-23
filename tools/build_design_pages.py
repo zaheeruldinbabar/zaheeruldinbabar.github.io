@@ -22,7 +22,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
-VER = "2026.17"
+VER = "2026.18"
 DATA = json.load(open(os.path.join(HERE, "design-projects.json"), encoding="utf-8"))
 SITE = DATA["site"]
 PROJECTS = DATA["projects"]
