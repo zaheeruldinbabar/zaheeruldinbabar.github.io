@@ -22,7 +22,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
-VER = "2026.16"
+VER = "2026.17"
 DATA = json.load(open(os.path.join(HERE, "design-projects.json"), encoding="utf-8"))
 SITE = DATA["site"]
 PROJECTS = DATA["projects"]
@@ -34,8 +34,8 @@ BRAND_ORDER = ["logo", "stationery", "packaging", "post", "flyer", "banner", "ui
 TOTAL = sum(len(p["items"]) for p in PROJECTS)
 WA = "https://wa.me/923263400018?text=" + "Hello%20Zaheer%2C%20I%20saw%20your%20design%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
 MAIL = "mailto:zaheeruldin978@gmail.com?subject=Design%20project%20inquiry"
-FONTS = ("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600"
-         "&family=Space+Grotesk:wght@500;600;700&display=swap")
+FONTS = ("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1"
+         "&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap")
 e = html.escape
 
 
@@ -147,7 +147,7 @@ def cta(root):
     return f'''    <section class="wrap" id="contact">
       <div class="cta rv">
         <p class="label">Start a project</p>
-        <h2>Have something that needs designing?</h2>
+        <h2>Have something that needs <em>designing?</em></h2>
         <p>Tell me what you are making and when you need it. A short message is enough to get started.</p>
         <div class="cta-actions">
           <a class="btn btn-wa" href="{WA}" target="_blank" rel="noopener">Chat on WhatsApp <span class="arr">&nearr;</span></a>
@@ -280,6 +280,7 @@ def preview_picks(key, limit=12):
 
 
 def marquee(root, tiles):
+    """Two moving rows of selected designs with a line of outlined type between them."""
     rows = []
     for r, row in enumerate(DATA["marquee"]):
         cells = []
@@ -292,9 +293,27 @@ def marquee(root, tiles):
                 else:
                     src, (w, h) = thumb(root, slug, n), dims(p, n)[:2]
                 hidden = ' aria-hidden="true" tabindex="-1"' if dup else f' aria-label="{e(p["title"])}"'
-                cells.append(f'<a class="mq-tile" href="{root}designs/{slug}.html"{hidden}><img src="{src}" width="{w}" height="{h}" alt="" decoding="async"></a>')
-        rows.append(f'        <div class="mq{" rev" if r else ""}"><div class="mq-track">{"".join(cells)}</div></div>')
-    return "\n".join(rows)
+                kind = TYPE[p["types"][n - 1]]["short"]
+                cells.append(f'<a class="mq-tile" href="{root}designs/{slug}.html"{hidden}>'
+                             f'<img src="{src}" width="{w}" height="{h}" alt="" loading="lazy" decoding="async">'
+                             f'<span class="mq-cap"><b>{e(p["title"])}</b>{e(kind)}</span></a>')
+        rows.append(f'          <div class="mq{" rev" if r else ""}"><div class="mq-track">{"".join(cells)}</div></div>')
+    fill = ' class="fill"'
+    words = "".join(f'<span{fill if i % 2 else ""}>{e(t["name"])}</span><i>&#10022;</i>' for i, t in enumerate(TYPES))
+    ticker = f'          <div class="ticker" aria-hidden="true"><div class="ticker-track">{words}{words}</div></div>'
+    return "\n".join([rows[0], ticker, rows[1]])
+
+
+def hero_art(root):
+    """The fan of four designs beside the hero heading."""
+    cards = []
+    for k, (slug, n) in enumerate(DATA["hero_art"], 1):
+        p = BY_SLUG[slug]
+        tw, th = dims(p, n)[:2]
+        prio = ' fetchpriority="high"' if k <= 2 else ""
+        cards.append(f'          <a class="art-card c{k}" href="{root}designs/{slug}.html" aria-label="{e(p["title"])}" style="--accent:{p["accent"]}">'
+                     f'<img src="{thumb(root, slug, n)}" width="{tw}" height="{th}" alt=""{prio} decoding="async"></a>')
+    return "\n".join(cards)
 
 
 # ---------- pages ----------
@@ -341,19 +360,32 @@ def build_home(tiles):
     page += f'''
   <main id="main">
     <section class="hero wrap">
-      <span class="pill"><i></i> Adobe Certified Professional &middot; Open to new projects</span>
-      <h1 class="display">Brand, campaign<br>&amp; packaging<br><em>design.</em></h1>
-      <div class="hero-row">
-        <p class="lead">I'm <strong>Zaheer Malik</strong>, a graphic designer in Gujranwala, Pakistan. Browse <strong>{TOTAL} designs</strong> by type of work, or open a brand to see everything made for it.</p>
+      <div class="hero-copy">
+        <span class="pill"><i></i> Adobe Certified Professional &middot; Open to new projects</span>
+        <h1 class="display">Design that gets brands <em>noticed.</em></h1>
+        <p class="lead">I'm <strong>Zaheer Malik</strong>, a graphic designer in Gujranwala, Pakistan. Logos, social campaigns, packaging, brochures and UI: <strong>{TOTAL} designs</strong> for {len(PROJECTS)} brands and collections.</p>
         <div class="hero-actions">
           <a class="btn btn-solid" href="#types">Browse by type <span class="arr down">&darr;</span></a>
           <a class="btn btn-ghost" href="#brands">Complete brands <span class="arr down">&darr;</span></a>
         </div>
       </div>
+      <div class="hero-art">
+        <span class="art-glow" aria-hidden="true"></span>
+        <span class="art-ring" aria-hidden="true"></span>
+        <span class="art-ring r2" aria-hidden="true"></span>
+        <div class="art-cards">
+{hero_art(root)}
+        </div>
+        <span class="art-chip a" aria-hidden="true"><i></i> Adobe Certified</span>
+        <span class="art-chip b" aria-hidden="true"><b>{TOTAL}</b> designs</span>
+        <span class="art-chip c" aria-hidden="true"><b>&#10022;</b> Logo to launch</span>
+      </div>
     </section>
 
     <div class="mq-wrap" aria-label="A moving strip of selected designs">
+      <div class="mq-tilt">
 {marquee(root, tiles)}
+      </div>
     </div>
 
     <section class="wrap">
@@ -373,7 +405,7 @@ def build_home(tiles):
 {"".join(sections)}
     <section class="sec wrap" id="brands">
       <div class="sec-head">
-        <div class="rv"><p class="label">Complete brand work</p><h2>Brands designed from logo to launch.</h2></div>
+        <div class="rv"><p class="label">Complete brand work</p><h2>Brands designed from <em>logo to launch.</em></h2></div>
         <p class="rv">For these brands I made more than one kind of design. Each page keeps the whole brand together: logo, posts, stationery, brochures and packaging.</p>
       </div>
       <div class="brand-grid">
@@ -383,7 +415,7 @@ def build_home(tiles):
 
     <section class="sec wrap" id="work">
       <div class="sec-head">
-        <div class="rv"><p class="label">All work</p><h2>Every brand and collection.</h2></div>
+        <div class="rv"><p class="label">All work</p><h2>Every brand and <em>collection.</em></h2></div>
         <p class="rv">{len(PROJECTS)} in total. Filter by the type of work each one contains.</p>
       </div>
       <div class="filters" role="group" aria-label="Filter by type of work">
@@ -396,7 +428,7 @@ def build_home(tiles):
 
     <section class="sec wrap" id="process">
       <div class="sec-head">
-        <div class="rv"><p class="label">Process</p><h2>How a project runs.</h2></div>
+        <div class="rv"><p class="label">Process</p><h2>How a project <em>runs.</em></h2></div>
         <p class="rv">Four simple stages, from first message to final files.</p>
       </div>
       <ol class="steps">
@@ -523,7 +555,7 @@ def build_project(p, idx):
     <section class="sec wrap about">
       <div class="rv">
         <p class="label">Design notes</p>
-        <h2>How it holds together.</h2>
+        <h2>How it holds <em>together.</em></h2>
       </div>
       <div class="rv">
         <ol class="notes">{notes}</ol>
@@ -565,6 +597,8 @@ def build_images():
     from PIL import Image, ImageOps
     mq_dir = os.path.join(REPO, "assets", "designs", "strip")
     os.makedirs(mq_dir, exist_ok=True)
+    for old in os.listdir(mq_dir):  # tiles are rebuilt from the current picks
+        os.remove(os.path.join(mq_dir, old))
     tiles = {}
     for row in DATA["marquee"]:
         for slug, n in row:

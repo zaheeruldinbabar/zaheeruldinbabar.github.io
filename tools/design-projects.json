@@ -7,94 +7,86 @@
     3
    ],
    [
-    "arwaan-rice",
-    10
+    "ithub-grw",
+    20
    ],
    [
     "calcperks",
-    1
+    2
    ],
    [
     "middle-man",
-    1
-   ],
-   [
-    "ithub-grw",
-    18
+    3
    ],
    [
     "zestiq-mina",
     3
    ],
    [
-    "stacklabx",
-    7
+    "jaguar-vpn",
+    11
    ],
    [
-    "tevta",
+    "stacklabx",
     2
    ],
    [
-    "etisalat",
-    10
+    "ithub-grw",
+    18
    ],
    [
     "zm-brand",
     7
    ],
    [
-    "top-shop",
-    4
+    "jaguar-vpn",
+    15
    ]
   ],
   [
    [
     "jaguar-vpn",
-    11
+    1
    ],
    [
     "calcperks",
     30
    ],
    [
-    "arwaan-rice",
-    5
+    "zm-brand",
+    10
    ],
    [
-    "ithub-grw",
-    21
+    "middle-man",
+    1
    ],
    [
     "websoft",
     3
    ],
    [
-    "flyers",
-    5
+    "jaguar-vpn",
+    24
    ],
    [
-    "realestate",
-    2
+    "stacklabx",
+    7
    ],
    [
-    "diapers-mall",
-    2
+    "ithub-grw",
+    21
    ],
    [
-    "electric",
-    4
-   ],
-   [
-    "channel-art",
+    "ithub-grw",
     1
    ],
    [
-    "logo-collection",
+    "zestiq-mina",
     1
    ],
    [
-    "vector",
-    2
+    "calcperks",
+    1
    ]
   ]
  ],
@@ -3293,5 +3285,23 @@
   "websoft",
   "diapers-mall",
   "zm-brand"
+ ],
+ "hero_art": [
+  [
+   "jaguar-vpn",
+   3
+  ],
+  [
+   "zestiq-mina",
+   3
+  ],
+  [
+   "calcperks",
+   2
+  ],
+  [
+   "zm-brand",
+   7
+  ]
  ]
 }
